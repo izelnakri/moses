@@ -35,6 +35,6 @@ $(document).ready(function() {
     });
   }
 
-  window.setTimeout(removeToolbars, 2000);
+  window.setTimeout(removeToolbars, 1500);
 
 });
