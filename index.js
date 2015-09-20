@@ -9,7 +9,7 @@ $(document).ready(function() {
   }
 
   var filteredDom = $("#styleguide").children()
-                .not("h1").not("h2").not("p")
+                .not("h1").not("h2").not("p").not("hr").not("img").not(".ignore")
                 .not("script").not("style").not("link");
 
 
@@ -29,11 +29,12 @@ $(document).ready(function() {
 
   SyntaxHighlighter.all()      
 
-  function removeToolbars () {
-    $(".toolbar").each(function(i, e) { 
-      $(e).hide(); 
-    });
-  }
+  // function removeToolbars () {
+  //   $(".toolbar").each(function(i, e) { 
+  //     $(e).hide(); 
+  //   });
+  // }
 
-  window.setTimeout(removeToolbars, 1500);
+  // window.setTimeout(removeToolbars, 2000);
+
 });
