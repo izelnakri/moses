@@ -27,7 +27,7 @@ $(document).ready(function() {
     createHtmlView($(element));
   });
 
-  SyntaxHighlighter.all()      
+  SyntaxHighlighter.all();      
 
   function removeToolbars () {
     $(".toolbar").each(function(i, e) { 
