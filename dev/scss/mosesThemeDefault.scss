@@ -4,20 +4,25 @@ $moses-top-fixed-navigation-height: 60px;
 moses-top-fixed-navigation {
   position: fixed;
   width: 100%;
-  background: red;
+  background: lightgrey;
   height: $moses-top-fixed-navigation-height;
   z-index: 99999;
   top: 0px;
   left: 20%;
   padding: 0px $moses-padding + 5px;
-  line-height: 60px;
   &.moses-left-navigation-inactive {
     left: 0%;
   }
   i {
     font-size: 40px !important;
     margin-top: 10px;
+    line-height: 60px;
     // line-height: $moses-top-fixed-navigation-height !important;
+  }
+  h1 {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 0px;
   }
 }
 
@@ -28,6 +33,8 @@ moses-left-navigation {
   position: fixed;
   z-index: 9999999;
   left: 0px;
+  top: 0px;
+  padding-top: $moses-top-fixed-navigation-height;
   background: lightgrey;
 
   a {

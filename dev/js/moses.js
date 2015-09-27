@@ -44,8 +44,8 @@ $(document).ready(function() {
 
 
 
-
-
+  //get all the header that are not inside the target and 
+  //put them in the navigation with a tags
 
   SyntaxHighlighter.all();      
 
