@@ -1,1 +1,4 @@
-my upcoming opensource frontend styleguide library
+TODO: 
+- ignore tag logic.
+- navigation logic.
+- import the css via the javascript

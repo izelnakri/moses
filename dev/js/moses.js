@@ -1,6 +1,8 @@
 //add here the code parser script tag
 // then select every tag and put them in the area
 $(document).ready(function() {
+  // SyntaxHighlighter.autoloader('htmlbrush', 'http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shBrushXml.js')
+
   var createScriptTag = function () {
     return $('<script/>', {
       type: "syntaxhighlighter",
@@ -16,7 +18,7 @@ $(document).ready(function() {
   var getWrapper = function (html) {
     html = html.wrap("<div class='target'></div>");
 
-    return createScriptTag().html("<![CDATA[ " + html_beautify(html.parent().html(), { indent_size: 2 }) + " ]]>");
+    return createScriptTag().html("<![CDATA[ " + html_beautify(html.parent().html(), { indent_size: 4 }) + " ]]>");
   }
 
   var createHtmlView = function (domElement) {
@@ -30,10 +32,18 @@ $(document).ready(function() {
     createHtmlView($(element));
   });
 
-  SyntaxHighlighter.config.stripBrs = true;
-
-  SyntaxHighlighter.defaults["tab-size"] = 2;
   SyntaxHighlighter.defaults["toolbar"] = false;
+  // SyntaxHighlighter.defaults["html-script"] = true;
+
+  $("moses-top-fixed-navigation").find(".fa").on("click", function(e) {
+    $(this).toggleClass("fa-bars").toggleClass("fa-times");
+    $("moses-left-navigation").toggle();
+    $("#styleguide").toggleClass("moses-left-navigation-inactive");
+    $("moses-top-fixed-navigation").toggleClass("moses-left-navigation-inactive");
+  })
+
+
+
 
 
 

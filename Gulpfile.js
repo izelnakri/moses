@@ -21,6 +21,7 @@ gulp.task('compile', ['css', 'js']);
 
 gulp.task('watch', ['compile'], function() {
     // gulp.watch(buildConfig.sass.watch, ['css']);
+    gulp.watch('dev/**/*.scss', ['css']);
 
     gulp.watch('external/*.js', ['js:vendor']);
 
@@ -28,21 +29,17 @@ gulp.task('watch', ['compile'], function() {
 });
 
 gulp.task('css', function() {
-    // return gulp.src(buildConfig.sass.src, {base: '../frontend'})
-    //     .pipe(gulpif(devMode, plumber({
-    //         errorHandler: notify('css error')
-    //     })))
-    //     .pipe(sass({
-    //         cacheLocation: '/tmp/sass', onError: function(er) {
-    //             console.log(er);
-    //             return false;
-    //         }
-    //     }))
-    //     .pipe(prefix())
-    //     .pipe(gulpif(!devMode, minifyCSS()))
-    //     .pipe(concat('frontend.css'))
-    //     .pipe(gulpif(createSourceMaps, sourcemaps.write(sourceMapsLocation === 'external' ? '.' : undefined)))
-    //     .pipe(gulp.dest(buildConfig.dest.css))
+    return gulp.src('dev/scss/mosesThemeDefault.scss')
+        .pipe(sass({
+            cacheLocation: '/tmp/sass', onError: function(er) {
+                console.log(er);
+                return false;
+            }
+        }))
+        .pipe(prefix())
+        .pipe(minifyCSS())
+        .pipe(concat('moses.css'))
+        .pipe(gulp.dest('src'))
 });
 
 gulp.task('js', ['js:vendor'], function () {
