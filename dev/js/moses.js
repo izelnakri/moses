@@ -35,6 +35,24 @@ $(document).ready(function() {
   SyntaxHighlighter.defaults["toolbar"] = false;
   // SyntaxHighlighter.defaults["html-script"] = true;
 
+
+  $("#styleguide").parent().append("<moses-navigation>
+    <moses-top-fixed-navigation>
+      <i class='fa fa-times'></i>
+      <h1>localhost:8080 Styleguide</h1>
+    </moses-top-fixed-navigation>
+
+    <moses-top-static-navigation>
+
+    </moses-top-static-navigation>
+
+    <moses-left-navigation>
+      <a href=''>Foundation</a>
+      <a href=''>Components</a>
+      <a href=''>Templets</a>
+    </moses-left-navigation>
+  </moses-navigation>");
+
   $("moses-top-fixed-navigation").find(".fa").on("click", function(e) {
     $(this).toggleClass("fa-bars").toggleClass("fa-times");
     $("moses-left-navigation").toggle();
