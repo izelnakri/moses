@@ -24,7 +24,7 @@ gulp.task('watch', ['compile'], function() {
 
     gulp.watch('external/*.js', ['js:vendor']);
 
-    gulp.watch('dev/*.js', ['js'])
+    gulp.watch('dev/**/*.js', ['js'])
 });
 
 gulp.task('css', function() {
@@ -46,7 +46,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', ['js:vendor'], function () {
-    return gulp.src(['build/vendor.js', 'dev/moses.js'])
+    return gulp.src(['build/vendor.js', 'dev/js/moses.js'])
         // .pipe(jshint())
         .pipe(concat('moses.js'))
         .pipe(uglify())
@@ -54,7 +54,11 @@ gulp.task('js', ['js:vendor'], function () {
 });
 
 gulp.task('js:vendor', function() {
-    return gulp.src(['external/jquery.js', 'external/shCore.js', 'external/shAutoloader.js', 'external/shBrushXml.js', 'external/shBrushJScript.js'])
+    return gulp.src(['external/jquery.js', 
+        'external/beautify.js', 'external/beautify-html.js',
+        'external/shCore.js',   
+        'external/shAutoloader.js', 'external/shBrushXml.js', 
+        'external/shBrushJScript.js'])
         // .pipe(jshint())
         .pipe(concat('vendor.js'))
         .pipe(uglify())

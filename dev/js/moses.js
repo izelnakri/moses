@@ -16,7 +16,7 @@ $(document).ready(function() {
   var getWrapper = function (html) {
     html = html.wrap("<div class='target'></div>");
 
-    return createScriptTag().html("<![CDATA[ " + html.parent().html() + " ]]>");
+    return createScriptTag().html("<![CDATA[ " + html_beautify(html.parent().html(), { indent_size: 2 }) + " ]]>");
   }
 
   var createHtmlView = function (domElement) {
@@ -24,16 +24,20 @@ $(document).ready(function() {
   }
 
   filteredDom.each(function(i, element) {
+    if(i === 3) {
+      a = $(element);
+    }
     createHtmlView($(element));
   });
 
+  SyntaxHighlighter.config.stripBrs = true;
+
+  SyntaxHighlighter.defaults["tab-size"] = 2;
+  SyntaxHighlighter.defaults["toolbar"] = false;
+
+
+
   SyntaxHighlighter.all();      
 
-  function removeToolbars () {
-    $(".toolbar").each(function(i, e) { 
-      $(e).hide(); 
-    });
-  }
 
-  window.setTimeout(removeToolbars, 1500);
 });
