@@ -13,7 +13,7 @@ $(document).ready(function() {
   $("#styleguide").parent().append("<moses-navigation>
     <moses-top-fixed-navigation>
       <i class='fa fa-times'></i>
-      <h1>localhost:8080 Styleguide</h1>
+      <h1>Styleguide</h1>
     </moses-top-fixed-navigation>
 
     <moses-top-static-navigation>
@@ -40,6 +40,39 @@ $(document).ready(function() {
     $("moses-top-fixed-navigation").toggleClass("moses-left-navigation-inactive");
   })
 
+  function changeStyleGuideName () {
+    var href = document.location.href.replace('http://', '');
+    href = href.replace('https://', '');
+
+    var name = href.replace(/\/.*/g, '');
+    var path = href.replace(name, '');
+    name = name.replace(name[0], name[0].toUpperCase());
+
+    $("moses-top-fixed-navigation").find('h1').text(name + " Styleguide");
+
+
+    function assignNavigationTarget () {
+      possibleTargets = ['examples', 'foundation', 'templates']
+
+      // var target;
+      possibleTargets.forEach(function (e, i) {
+        if (path.match(e.toLowerCase()) {
+          var target = e;
+        });
+      });
+      if (typeof target === "undefined") {
+        var target = 'foundation';
+      }
+    }
+
+    if (path.match(/examples/)) {
+      console.log("LOL"); 
+    }
+
+    //also add to localStorage
+  }
+
+  changeStyleGuideName();
 
   var writtenScope = $("#styleguide").children()
 
@@ -47,11 +80,9 @@ $(document).ready(function() {
                 .not("h1").not("h2").not("p")
                 .not("script").not("style").not("link");
 
-
   var idCount = 0;
   for (i=1; i<=6; i++) {
     if (i == 1) { var headersArray = [] }
-    // i = new Number(i);
     var ref_array = writtenScope.filter("h" + i);
     $.each(ref_array, function(i, e) {
       idCount++;
@@ -71,7 +102,7 @@ $(document).ready(function() {
   }
 
   var createHtmlView = function (domElement) {
-    domElement.append(getWrapper(domElement));
+    domElement.after(getWrapper(domElement));
   }
 
   filteredDom.each(function(i, element) {
