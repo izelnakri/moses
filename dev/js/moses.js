@@ -1,7 +1,23 @@
-//add here the code parser script tag
-// then select every tag and put them in the area
+
+var css,
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+style.type = 'text/css';
+
+if (style.styleSheet){
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+
+head.appendChild(style);
+
 $(document).ready(function() {
+  // $("body").prepend()
   // SyntaxHighlighter.autoloader('htmlbrush', 'http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shBrushXml.js')
+  //add here the code parser script tag
+  // then select every tag and put them in the area
 
   var createScriptTag = function () {
     return $('<script/>', {
@@ -22,13 +38,13 @@ $(document).ready(function() {
 
     <moses-left-navigation>
       <ul id='moses-foundation'>
-        <li><a href=''>Foundation</a></li>
+        <li><a href='/examples/bootstrap/foundation'>Foundation</a></li>
       </ul>
       <ul id='moses-components'>
-        <li><a href=''>Components</a></li>
+        <li><a href='/examples/bootstrap/components'>Components</a></li>
       </ul>
       <ul id='moses-templates'>
-        <li><a href=''>Templates</a></li>
+        <li><a href='/examples/bootstrap/templates'>Templates</a></li>
       </ul>
     </moses-left-navigation>
   </moses-navigation>");
@@ -38,61 +54,68 @@ $(document).ready(function() {
     $("moses-left-navigation").toggle();
     $("#styleguide").toggleClass("moses-left-navigation-inactive");
     $("moses-top-fixed-navigation").toggleClass("moses-left-navigation-inactive");
-  })
+  });
 
-  function changeStyleGuideName () {
-    var href = document.location.href.replace('http://', '');
-    href = href.replace('https://', '');
+  var href = document.location.href.replace('http://', '');
+  href = href.replace('https://', '');
 
-    var name = href.replace(/\/.*/g, '');
-    var path = href.replace(name, '');
-    name = name.replace(name[0], name[0].toUpperCase());
+  var targetPage,
+      name = href.replace(/\/.*/g, ''),
+      path = href.replace(name, '');
 
-    $("moses-top-fixed-navigation").find('h1').text(name + " Styleguide");
+  name = name.replace(name[0], name[0].toUpperCase());
 
+  $("moses-top-fixed-navigation").find('h1').text(name + " Styleguide");
 
-    function assignNavigationTarget () {
-      possibleTargets = ['examples', 'foundation', 'templates']
+  function assignNavigationTarget () {
+    possibleTargets = ['components', 'foundation', 'templates'];
 
-      // var target;
-      possibleTargets.forEach(function (e, i) {
-        if (path.match(e.toLowerCase()) {
-          var target = e;
-        });
-      });
-      if (typeof target === "undefined") {
-        var target = 'foundation';
+    possibleTargets.forEach( function (e, i) {
+      if (path.indexOf(e.toLowerCase()) > -1)  {
+        targetPage = e;
       }
-    }
+    });
 
-    if (path.match(/examples/)) {
-      console.log("LOL"); 
+    if (typeof targetPage === "undefined") {
+      targetPage = 'foundation';
     }
-
-    //also add to localStorage
   }
 
-  changeStyleGuideName();
+  assignNavigationTarget();
 
-  var writtenScope = $("#styleguide").children()
+  console.log(targetPage);
+  console.log($("#moses-" + targetPage));
+
+  localStorage.setItem("moses:routes", JSON.stringify({ "lol": 1, "myvar": "High" }));  
+
+  var writtenScope = $("#styleguide").children();
 
   var filteredDom = writtenScope
                 .not("h1").not("h2").not("p")
                 .not("script").not("style").not("link");
 
   var idCount = 0;
+  
   for (i=1; i<=6; i++) {
+
     if (i == 1) { var headersArray = [] }
+
     var ref_array = writtenScope.filter("h" + i);
+
     $.each(ref_array, function(i, e) {
-      idCount++;
+      idCount = idCount + 1;
       $(e).attr('id', 'moses' + idCount);
     });
+
     headersArray = $.merge(headersArray, ref_array);
   }(i)
   
+  b = headersArray;
+
+  console.log(headersArray);
+
   $.each(headersArray, function(i, e) { 
-    $("#moses-foundation").append("<a href='#" +$(e).attr('id') + "'>" + $(e).text() + "</a>"); 
+    $("#moses-" + targetPage).append("<a href='#" + $(e).attr('id') + "'>" + $(e).text() + "</a>"); 
   });
 
   var getWrapper = function (html) {
@@ -106,7 +129,7 @@ $(document).ready(function() {
   }
 
   filteredDom.each(function(i, element) {
-    if(i === 3) {
+    if (i === 3) {
       a = $(element);
     }
     createHtmlView($(element));
@@ -123,6 +146,5 @@ $(document).ready(function() {
   //put them in the navigation with a tags
 
   SyntaxHighlighter.all();      
-
 
 });

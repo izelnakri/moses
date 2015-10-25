@@ -9,26 +9,40 @@ var gulp = require('gulp')
     minifyCSS = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    path = require('path');
+    path = require('path'),
+    fs = require('fs'),
+    prependFile = require('prepend-file');
     // buildConfig = require('./config/build.js'),
+
+function customFunc () {
+    var string = fs.readFileSync('src/moses.css', 'utf8');
+
+    prependFile('src/moses.js', "var css = \"" + string + "\";", function (err) {
+        if (err) {
+            throw err;
+        }
+        console.log("successfully prepended");
+    })
+}
+
 
 
 // TASKS
 gulp.task('default', usage);
 gulp.task('usage', usage);
 
-gulp.task('compile', ['css', 'js']);
+gulp.task('compile', ['css:minify', 'js']);
 
 gulp.task('watch', ['compile'], function() {
     // gulp.watch(buildConfig.sass.watch, ['css']);
-    gulp.watch('dev/**/*.scss', ['css']);
+    gulp.watch('dev/**/*.scss', ['css:minify']);
 
     gulp.watch('external/*.js', ['js:vendor']);
 
     gulp.watch('dev/**/*.js', ['js'])
 });
 
-gulp.task('css', function() {
+gulp.task('css:minify', function() {
     return gulp.src('dev/scss/mosesThemeDefault.scss')
         .pipe(sass({
             cacheLocation: '/tmp/sass', onError: function(er) {
@@ -42,13 +56,23 @@ gulp.task('css', function() {
         .pipe(gulp.dest('src'))
 });
 
-gulp.task('js', ['js:vendor'], function () {
+// gulp.task('css:compile', function () {
+//     return gulp.src('src/moses.scss')
+//         .pipe()
+// });
+
+gulp.task('js:compile', ['js:vendor'], function () {
     return gulp.src(['build/vendor.js', 'dev/js/moses.js'])
         // .pipe(jshint())
         .pipe(concat('moses.js'))
         .pipe(uglify())
         .pipe(gulp.dest('src'))
 });
+
+gulp.task('js', ['js:compile'], function() {
+    customFunc();
+});
+
 
 gulp.task('js:vendor', function() {
     return gulp.src(['external/jquery.js', 
