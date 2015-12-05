@@ -1,5 +1,8 @@
 //put the jshint right before the error!
 
+//add icons
+
+
 var gulp = require('gulp')
     gulpif = require('gulp-if'),
     colors = require('colors'),
@@ -14,7 +17,7 @@ var gulp = require('gulp')
     prependFile = require('prepend-file');
     // buildConfig = require('./config/build.js'),
 
-function customFunc () {
+function cssToJs () {
     var string = fs.readFileSync('src/moses.css', 'utf8');
 
     prependFile('src/moses.js', "var css = \"" + string + "\";", function (err) {
@@ -70,7 +73,7 @@ gulp.task('js:compile', ['js:vendor'], function () {
 });
 
 gulp.task('js', ['js:compile'], function() {
-    customFunc();
+    cssToJs();
 });
 
 

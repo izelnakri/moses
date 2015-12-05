@@ -59,7 +59,7 @@ h4:before, h5:before, h6:before {
   padding: 0px $moses-padding;
   position: relative;
   width: 80%;
-  overflow: hidden;
+  overflow: scroll;
   &.moses-left-navigation-inactive {
     left: 0%;
     width: 100%;

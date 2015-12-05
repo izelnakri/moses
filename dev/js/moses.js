@@ -1,4 +1,3 @@
-
 var css,
     head = document.head || document.getElementsByTagName('head')[0],
     style = document.createElement('style');
@@ -12,6 +11,10 @@ if (style.styleSheet){
 }
 
 head.appendChild(style);
+//also add font-awesome
+
+
+
 
 $(document).ready(function() {
   // $("body").prepend()
@@ -86,7 +89,7 @@ $(document).ready(function() {
   console.log(targetPage);
   console.log($("#moses-" + targetPage));
 
-  localStorage.setItem("moses:routes", JSON.stringify({ "lol": 1, "myvar": "High" }));  
+  localStorage.setItem("moses:routes", JSON.stringify({ "lol": "test", "myvar": "this works" }));  
 
   var writtenScope = $("#styleguide").children();
 
