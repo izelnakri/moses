@@ -121,7 +121,19 @@ $(document).ready(function() {
   console.log(headersArray);
 
   $.each(headersArray, function(i, e) { 
-    $("#moses-" + targetPage).append("<a href='#" + $(e).attr('id') + "'>" + $(e).text() + "</a>"); 
+    $("#moses-" + targetPage).append("<li><a href='#" + $(e).attr('id') + "'>" + $(e).text() + "</a></li>"); 
+  });
+
+  $("moses-left-navigation").find('li').each(function (i, e) {
+    $(e).on('click', function(event) {
+      $("moses-left-navigation").find('li').each(function(index, element) {
+        if ($(element).hasClass('selected')) {
+          $(element).removeClass('selected');
+        }
+      });
+
+      $(e).toggleClass('selected'); 
+    });
   });
 
   var getWrapper = function (html) {

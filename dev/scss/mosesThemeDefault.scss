@@ -4,7 +4,7 @@ $moses-top-fixed-navigation-height: 60px;
 moses-top-fixed-navigation {
   position: fixed;
   width: 100%;
-  background: lightgrey;
+  background: #001527;
   height: $moses-top-fixed-navigation-height;
   z-index: 99999;
   top: 0px;
@@ -17,13 +17,14 @@ moses-top-fixed-navigation {
     font-size: 40px !important;
     margin-top: 10px;
     line-height: 60px;
-    color: rgb(51, 51, 51) !important;
+    color: #FFF;
     // line-height: $moses-top-fixed-navigation-height !important;
   }
   h1 {
     display: inline-block;
     margin-left: 20px;
     margin-top: 0px;
+    color: #FFF;
   }
 }
 
@@ -36,7 +37,38 @@ moses-left-navigation {
   left: 0px;
   top: 0px;
   padding-top: $moses-top-fixed-navigation-height;
-  background: lightgrey;
+  background: #001527;
+  font-family: 'Helvetica' !important;
+  
+  ul {
+    margin-left: 25px;
+    padding: 0px !important;
+    li {
+      border-left: 2px solid #50A5E6;
+      padding-left: 32px !important;
+      list-style: none;
+      &:first-of-type {
+        font-weight: bold;
+        font-size: 16px;
+        padding-left: 15px;
+        border-color: #FFF;
+        a {
+          color: #FFF;
+        }
+      }
+      &:hover {
+        border-color: #FFF !important;
+      }
+      a:hover {
+        color: #FFF !important;
+        text-decoration: none;
+      }
+      &.selected a {
+        color: #FFF;
+        border-color: #FFF;
+      }
+    }
+  }
 
   a {
     width: 100%;

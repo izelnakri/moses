@@ -38,7 +38,7 @@ gulp.task('compile', ['css:minify', 'js']);
 
 gulp.task('watch', ['compile'], function() {
     // gulp.watch(buildConfig.sass.watch, ['css']);
-    gulp.watch('dev/**/*.scss', ['css:minify']);
+    gulp.watch('dev/**/*.scss', ['js']);
 
     gulp.watch('external/*.js', ['js:vendor']);
 
@@ -64,7 +64,7 @@ gulp.task('css:minify', function() {
 //         .pipe()
 // });
 
-gulp.task('js:compile', ['js:vendor'], function () {
+gulp.task('js:compile', ['css:minify', 'js:vendor'], function () {
     return gulp.src(['build/vendor.js', 'dev/js/moses.js'])
         // .pipe(jshint())
         .pipe(concat('moses.js'))
