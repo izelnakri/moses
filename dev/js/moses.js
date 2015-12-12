@@ -1,3 +1,4 @@
+//inject custom css:
 var css,
     head = document.head || document.getElementsByTagName('head')[0],
     style = document.createElement('style');
@@ -19,6 +20,8 @@ fileref.setAttribute("type", "text/css");
 fileref.setAttribute("href", 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 document.getElementsByTagName("head")[0].appendChild(fileref);
 
+
+//actual code:
 $(document).ready(function() {
   // $("body").prepend()
   // SyntaxHighlighter.autoloader('htmlbrush', 'http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shBrushXml.js')
@@ -32,6 +35,7 @@ $(document).ready(function() {
     });
   }
 
+  //navigation html:
   $("#styleguide").parent().append("<moses-navigation>
     <moses-top-fixed-navigation>
       <i class='fa fa-times'></i>
@@ -55,6 +59,7 @@ $(document).ready(function() {
     </moses-left-navigation>
   </moses-navigation>");
 
+  //navigation toggle:
   $("moses-top-fixed-navigation").find(".fa").on("click", function(e) {
     $(this).toggleClass("fa-bars").toggleClass("fa-times");
     $("moses-left-navigation").toggle();
@@ -62,6 +67,7 @@ $(document).ready(function() {
     $("moses-top-fixed-navigation").toggleClass("moses-left-navigation-inactive");
   });
 
+  //styleguide name assignment:
   var href = document.location.href.replace('http://', '');
   href = href.replace('https://', '');
 
@@ -73,6 +79,7 @@ $(document).ready(function() {
 
   $("moses-top-fixed-navigation").find('h1').text(name + " Styleguide");
 
+  //styleguide finding current page:
   function assignNavigationTarget () {
     possibleTargets = ['components', 'foundation', 'templates'];
 
@@ -92,8 +99,9 @@ $(document).ready(function() {
   console.log(targetPage);
   console.log($("#moses-" + targetPage));
 
-  localStorage.setItem("moses:routes", JSON.stringify({ "lol": "test", "myvar": "this works" }));  
+  // localStorage.setItem("moses:routes", JSON.stringify({ "lol": "test", "myvar": "this works" }));  
 
+  //headers assignment logic:
   var writtenScope = $("#styleguide").children();
 
   var filteredDom = writtenScope
@@ -102,7 +110,7 @@ $(document).ready(function() {
 
   var idCount = 0;
   
-  for (i=1; i<=6; i++) {
+  for (i=1; i<=3; i++) {
 
     if (i == 1) { var headersArray = [] }
 
@@ -111,6 +119,7 @@ $(document).ready(function() {
     $.each(ref_array, function(i, e) {
       idCount = idCount + 1;
       $(e).attr('id', 'moses' + idCount);
+      $(e).addClass('moses-title')
     });
 
     headersArray = $.merge(headersArray, ref_array);
@@ -136,10 +145,22 @@ $(document).ready(function() {
     });
   });
 
-  var getWrapper = function (html) {
-    html = html.wrap("<div class='target'></div>");
+  //html display logic:
+  var getWrapper = function ($element) {
+    if ($element.hasClass('moses-group')) {
+      $element.addClass('target');
+      // console.log($element.html());
+      return createScriptTag().html("<![CDATA[ " + html_beautify($element.html().trim(), { indent_size: 4 }) + " ]]>");
+    }
 
-    return createScriptTag().html("<![CDATA[ " + html_beautify(html.parent().html(), { indent_size: 4 }) + " ]]>");
+    if ($element.hasClass('moses-hide')) {
+      return true;
+    }
+
+    $element = $element.wrap("<div class='target'></div>");
+    console.log($element);
+    return createScriptTag().html("<![CDATA[ " + html_beautify($element.parent().html(), { indent_size: 4 }) + " ]]>");
+
   }
 
   var createHtmlView = function (domElement) {
@@ -147,17 +168,11 @@ $(document).ready(function() {
   }
 
   filteredDom.each(function(i, element) {
-    if (i === 3) {
-      a = $(element);
-    }
-    createHtmlView($(element));
+      createHtmlView($(element));
   });
 
   SyntaxHighlighter.defaults["toolbar"] = false;
   // SyntaxHighlighter.defaults["html-script"] = true;
-
-
-
 
 
   //get all the header that are not inside the target and 

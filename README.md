@@ -5,3 +5,18 @@ TODO:
 - styleguide name logic from domain
 - navigation populating + localstorage caching
 - maybe use http://prismjs.com/
+
+
+
+special classes:
+
+.moses-group
+
+.moses-hide
+
+.moses-icon
+
+.moses-color
+
+.moses-grid
+

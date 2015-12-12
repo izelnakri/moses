@@ -104,6 +104,14 @@ h4:before, h5:before, h6:before {
   }
 }
 
+
+.moses-title {
+  padding-bottom: 12px;
+  border-bottom: 1px solid lightgrey;
+}
+
+
+
 //shTheme
 $background                   : #0E1B29 !default;
 
@@ -207,7 +215,8 @@ $caption_color                : $code_plain !default;
   overflow: auto !important;
   font-size: 1em !important;
 
-  &.source { overflow: hidden !important; }
+  &.source { 
+    overflow: hidden !important; }
 
   // set up bold and italic
   .bold { font-weight: bold !important; }
@@ -237,7 +246,7 @@ $caption_color                : $code_plain !default;
           width: 100% !important;
           height: 100% !important;
           border: none !important;
-          background: white !important;
+          background: $background !important;
           padding-left: 1em !important;
           overflow: hidden !important;
           white-space: pre !important;
