@@ -24,7 +24,7 @@ moses-top-fixed-navigation {
     display: inline-block;
     margin-left: 20px;
     margin-top: 0px;
-    color: #FFF;
+    color: #274361;
   }
 }
 
@@ -104,11 +104,32 @@ h4:before, h5:before, h6:before {
   }
 }
 
-
+//title styling:
 .moses-title {
   padding-bottom: 12px;
   border-bottom: 1px solid lightgrey;
 }
+
+//moses-palette styling: 
+.moses-palette {
+  .moses-grid {
+    text-align: center;
+    width: 16%;
+    font-size: 16px;
+    font-family: 'Helvetica';
+    display: inline-block;
+  }
+
+  .moses-color {
+    height: 160px;
+    width: 100%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+  }
+
+}
+
 
 
 

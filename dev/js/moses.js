@@ -153,8 +153,8 @@ $(document).ready(function() {
       return createScriptTag().html("<![CDATA[ " + html_beautify($element.html().trim(), { indent_size: 4 }) + " ]]>");
     }
 
-    if ($element.hasClass('moses-hide')) {
-      return true;
+    if ($element.hasClass('moses-hide') || $element.hasClass('moses-palette')) {
+      return undefined;
     }
 
     $element = $element.wrap("<div class='target'></div>");
@@ -170,6 +170,26 @@ $(document).ready(function() {
   filteredDom.each(function(i, element) {
       createHtmlView($(element));
   });
+
+
+  //moses color logic:
+  $(".moses-color").each(function(i, e) {
+    $(e).css('background', $(e).text());
+  });
+
+  $(".moses-palette").find("p").each(function(i, e) {
+    $(e).wrap("<div class='moses-grid'></div>");
+    var $grid = $(e).parent(),
+        nextColor = $grid.next(".moses-color");
+    if (nextColor) {
+      nextColor.appendTo($grid);
+    }
+  });
+
+  $(".moses-palette").find("span").each(function(i, e) {
+    $(e).wrap("<div class='moses-grid'></div>");
+  });
+
 
   SyntaxHighlighter.defaults["toolbar"] = false;
   // SyntaxHighlighter.defaults["html-script"] = true;
