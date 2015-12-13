@@ -7,10 +7,9 @@ moses-top-fixed-navigation {
   background: #001527;
   height: $moses-top-fixed-navigation-height;
   z-index: 3;
-  text-align: center;
   top: 0px;
   left: 0;
-  padding: 0px $moses-padding + 5px;
+  padding: 0;
   &.opened {
     transform: translate3d(250px, 0, 0);
   }
@@ -26,12 +25,16 @@ moses-top-fixed-navigation {
     margin-top: 10px;
     line-height: 60px;
     color: #FFF;
-    // line-height: $moses-top-fixed-navigation-height !important;
+    left: 10px;
+    position: absolute;
   }
   h1 {
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 0px;
+    font-size: 30px !important;
+    font-family: 'Helvetica';
+    line-height: 60px;
+    margin: 0;
+    margin-left: 60px;
     color: #274361;
   }
 }
