@@ -6,12 +6,20 @@ moses-top-fixed-navigation {
   width: 100%;
   background: #001527;
   height: $moses-top-fixed-navigation-height;
-  z-index: 99999;
+  z-index: 3;
+  text-align: center;
   top: 0px;
-  left: 20%;
+  left: 0;
   padding: 0px $moses-padding + 5px;
-  &.moses-left-navigation-inactive {
-    left: 0%;
+  &.opened {
+    transform: translate3d(250px, 0, 0);
+  }
+  &:after {
+    clear: both;
+  }
+  &:before, &:after {
+      content: ' ';
+      display: table;
   }
   i {
     font-size: 40px !important;
@@ -30,16 +38,17 @@ moses-top-fixed-navigation {
 
 moses-left-navigation {
   display: block; 
-  width: 20%; 
+  width: 250px; 
   height: 100%; 
   position: fixed;
   z-index: 9999999;
+  overflow-y: auto;
   left: 0px;
   top: 0px;
-  padding-top: $moses-top-fixed-navigation-height;
+  padding-top: 0px;
   background: #001527;
   font-family: 'Helvetica' !important;
-  
+  z-index: 1;
   ul {
     margin-left: 25px !important;
     padding: 0px !important;
@@ -99,14 +108,15 @@ h4:before, h5:before, h6:before {
 
 #styleguide {
   margin-top: 60px;
-  left: 20%; 
   padding: 0px $moses-padding;
   position: relative;
-  width: 80%;
   overflow: scroll;
-  &.moses-left-navigation-inactive {
-    left: 0%;
-    width: 100%;
+  left: 0%;
+  width: 100%;
+  transform: translate3d(250px, 0, 0);
+  &.closed {
+    left: 0;
+    transform: none;
   }
 }
 

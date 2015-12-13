@@ -37,15 +37,6 @@ $(document).ready(function() {
 
   //navigation html:
   $("#styleguide").parent().append("<moses-navigation>
-    <moses-top-fixed-navigation>
-      <i class='fa fa-times'></i>
-      <h1>Styleguide</h1>
-    </moses-top-fixed-navigation>
-
-    <moses-top-static-navigation>
-
-    </moses-top-static-navigation>
-
     <moses-left-navigation>
       <ul id='moses-foundation'>
         <li><a href='/examples/bootstrap/foundation'>Foundation</a></li>
@@ -57,14 +48,22 @@ $(document).ready(function() {
         <li><a href='/examples/bootstrap/templates'>Templates</a></li>
       </ul>
     </moses-left-navigation>
-  </moses-navigation>");
+    <moses-top-fixed-navigation class='opened'>
+      <i class='fa fa-times'></i>
+      <h1>Styleguide</h1>
+    </moses-top-fixed-navigation>
+
+    <moses-top-static-navigation>
+
+    </moses-top-static-navigation>
+      </moses-navigation>");
 
   //navigation toggle:
   $("moses-top-fixed-navigation").find(".fa").on("click", function(e) {
     $(this).toggleClass("fa-bars").toggleClass("fa-times");
     $("moses-left-navigation").toggle();
-    $("#styleguide").toggleClass("moses-left-navigation-inactive");
-    $("moses-top-fixed-navigation").toggleClass("moses-left-navigation-inactive");
+    $("#styleguide").toggleClass("closed");
+    $("moses-top-fixed-navigation").toggleClass("opened");
   });
 
   //styleguide name assignment:
