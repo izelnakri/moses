@@ -78,7 +78,13 @@ moses-left-navigation {
     width: 100%;
     height: 30px;
     display: block;
+    color: #274361 !important;
+    font-family: 'Helvetica';
+    font-size: 16px;
     text-decoration: none !important;
+  }
+  a:visited {
+    color: #274361 !important;
   }
 }
 
