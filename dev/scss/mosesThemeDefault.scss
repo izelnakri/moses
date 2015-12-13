@@ -10,15 +10,9 @@ moses-top-fixed-navigation {
   top: 0px;
   left: 0;
   padding: 0;
+  transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
   &.opened {
     transform: translate3d(250px, 0, 0);
-  }
-  &:after {
-    clear: both;
-  }
-  &:before, &:after {
-      content: ' ';
-      display: table;
   }
   i {
     font-size: 40px !important;
@@ -53,6 +47,7 @@ moses-left-navigation {
   background: #001527;
   font-family: 'Helvetica' !important;
   z-index: 1;
+  transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
   ul {
     margin-left: 25px !important;
     padding: 0px !important;
@@ -118,6 +113,7 @@ h4:before, h5:before, h6:before {
   left: 0%;
   width: 100%;
   transform: translate3d(250px, 0, 0);
+  transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
   &.closed {
     left: 0;
     transform: none;
