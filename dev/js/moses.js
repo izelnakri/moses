@@ -153,7 +153,7 @@ $(document).ready(function() {
       return createScriptTag().html("<![CDATA[ " + html_beautify($element.html().trim(), { indent_size: 4 }) + " ]]>");
     }
 
-    if ($element.hasClass('moses-hide') || $element.hasClass('moses-palette')) {
+    if ($element.hasClass('moses-hide') || $element.hasClass('moses-palette') || $element.hasClass('moses-icon-list')) {
       return undefined;
     }
 
@@ -189,6 +189,13 @@ $(document).ready(function() {
   $(".moses-palette").find("span").each(function(i, e) {
     $(e).wrap("<div class='moses-grid'></div>");
   });
+
+  //moses icon list logic:
+  // var iconClassname = $("moses-icon-list").attr('icon-class-name') || "icon";
+
+  // $()
+
+
 
 
   SyntaxHighlighter.defaults["toolbar"] = false;

@@ -14,7 +14,7 @@ special classes:
 
 .moses-hide
 
-.moses-icon
+.moses-icon-list
 
 .moses-color
 
