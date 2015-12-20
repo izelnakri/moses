@@ -5,14 +5,22 @@ This is the library every frontend team needs to document and showcase their wor
 It is very easy to get started:
 
 - Create an empty webpage that has your css and javascript.
-- Include ```ruby <script src="https://rawgit.com/izelnakri/moses/master/src/moses.js"></script>``` before ```ruby </body>```.
+- Include 
+```ruby 
+<script src="https://rawgit.com/izelnakri/moses/master/src/moses.js"></script>
+``` 
+before 
+```ruby
+</body>
+```
 
 Now you can use the styleguide!
 
 ####How to Use
 
 - create ```html
- <main id="styleguide">```. Whatever html you write inside the the <main> tag will get documented!
+ <main id="styleguide">
+ ```. Whatever html you write inside the the <main> tag will get documented!
 - The library uses h1, h2, h3 as the title of your components, they get displayed on the left side of the styleguide navigation.
 - ```html
  <p>``` tag  is used for descriptions, thus our html display engine ignores the element at the direct childrent level after ```html
