@@ -9,44 +9,42 @@ It is very easy to get started:
 ```html 
 <script src="https://rawgit.com/izelnakri/moses/master/src/moses.js"></script>
 ``` 
-before 
-```html
-</body>
-```
+before ``` </body> ```
 
 Now you can use the styleguide!
 
 ####How to Use
 
-- create ```html
- <main id="styleguide">
- ```. Whatever html you write inside the the <main> tag will get documented!
+- create 
+```html
+  <main id="styleguide">
+```. Whatever html you write inside the the <main> tag will get documented!
 - The library uses h1, h2, h3 as the title of your components, they get displayed on the left side of the styleguide navigation.
-- ```html
- <p>``` tag  is used for descriptions, thus our html display engine ignores the element at the direct childrent level after ```html
- <main``` tag.
-- Every element other than ```html
- <h1>, <h2>, <h3> and <p>``` tag will be detected by the styleguide display engine and the html will be displayed under the element.
+```<p>``` tag  is used for descriptions, thus our html display engine ignores the element at the direct childrent level after ``` <main> ``` tag.
+- Every element other than 
+```html
+ <h1>, <h2>, <h3> and <p>
+``` tag will be detected by the styleguide display engine and the html will be displayed under the element.
 
 Now go ahead and try the library, you will be impressed.
 
 ##Additional stuff
 
 ###Grouping elements
-- you can group your components/classes under a single html display if you wrap the elements with ```html
- .moses-group```:
+- you can group your components/classes under a single html display if you wrap the elements with ```.moses-group```:
 ```html
  <div class="moses-group">
     <!-- everything here will get displayed including the comments! -->
-  </div>````
+  </div>
+````
 
 ###Hiding elements
-- you can turn of the display generation for a single element/parent element with ```html
- .moses-hide```:
+- you can turn of the display generation for a single element/parent element with ``` .moses-hide ```:
 ```html
  <div class="moses-hide">
     <!-- these elements will have an html display -->
-  </div>````
+  </div>
+````
 
 
 
