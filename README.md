@@ -19,7 +19,7 @@ Now you can use the styleguide!
 ```html
   <main id="styleguide">
 ``` 
-Whatever html you write inside the the <main> tag will get documented!
+Whatever html you write inside the the ```<main>``` tag will get documented!
 - The library uses h1, h2, h3 as the title of your components, they get displayed on the left side of the styleguide navigation.
 ```<p>``` tag  is used for descriptions, thus our html display engine ignores the element at the direct childrent level after ``` <main> ``` tag.
 - Every element other than 
