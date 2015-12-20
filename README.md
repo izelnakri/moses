@@ -5,9 +5,9 @@ This is the library every frontend team needs to document and showcase their wor
 It is very easy to get started:
 
 - Create an empty webpage that has your css and javascript.
-- Include ```html
+- Include ```ruby
  <script src="https://rawgit.com/izelnakri/moses/master/src/moses.js"></script>
- ``` before ```html
+ ``` before ```ruby
  </body>
  ```.
 
