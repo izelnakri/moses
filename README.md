@@ -6,11 +6,11 @@ It is very easy to get started:
 
 - Create an empty webpage that has your css and javascript.
 - Include 
-```ruby 
+```html 
 <script src="https://rawgit.com/izelnakri/moses/master/src/moses.js"></script>
 ``` 
 before 
-```ruby
+```html
 </body>
 ```
 
