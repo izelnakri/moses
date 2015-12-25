@@ -120,8 +120,19 @@ h4:before, h5:before, h6:before {
   }
 }
 
+.moses-code {
+  background-color: #f9f2f4;
+  color: #c7254e;
+  font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+  padding: 2px 4px;
+  font-size: 90%;
+  border-radius: 0;
+}
+
+
 //title styling:
-.moses-title {
+.moses-title, h1.moses-ignore, h2.moses-ignore, h3.moses-ignore,
+h4.moses-ignore, h5.moses-ignore, h6.moses-ignore {
   padding-bottom: 12px;
   border-bottom: 1px solid lightgrey;
 }

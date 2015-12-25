@@ -101,30 +101,68 @@ $(document).ready(function() {
   // localStorage.setItem("moses:routes", JSON.stringify({ "lol": "test", "myvar": "this works" }));  
 
   //headers assignment logic:
-  var writtenScope = $("#styleguide").children();
+  var writtenScope = $("#styleguide").children(),
+      headersArray = [],
+      subheaderArray = [];
 
   var filteredDom = writtenScope
                 .not("h1").not("h2").not("p")
                 .not("script").not("style").not("link");
 
-  var idCount = 0;
+  function findHeaders (callback) {
+    var idCount = 0;
   
-  for (i=1; i<=3; i++) {
+    for (i=1; i<=3; i++) {
 
-    if (i == 1) { var headersArray = [] }
+      var ref_array = writtenScope.not(".moses-ignore").filter("h" + i),
+          ref_subheader_array = writtenScope.filter(".moses-ignore").filter("h" + i);
 
-    var ref_array = writtenScope.filter("h" + i);
+      $.each(ref_array, function(i, e) {
+        idCount = idCount + 1;
+        $(e).attr('id', 'moses' + idCount);
+        $(e).addClass('moses-title')
+      });
 
-    $.each(ref_array, function(i, e) {
-      idCount = idCount + 1;
-      $(e).attr('id', 'moses' + idCount);
-      $(e).addClass('moses-title')
-    });
+      $.each(ref_subheader_array, function(i, e) {
+        subheaderArray = $.merge(subheaderArray, ref_subheader_array);
+      });
 
-    headersArray = $.merge(headersArray, ref_array);
-  }(i)
+      headersArray = $.merge(headersArray, ref_array);
+    }(i)
+
+    if (callback) { callback(); }
+  }
   
-  b = headersArray;
+  findHeaders(function () {
+    console.log(subheaderArray);
+
+    //ITERATE OVER SUBHEADER ARRAY AND ASSIGN THEM TO THE SUBHEADER DISPLAYS
+
+
+    //write subheader displays
+    // $.each(headersArray, function (index, header) {
+    //   var element = $(header), 
+    //       nextHeader = headersArray[index + 1];
+
+    //   function goToNextElement (element) {
+    //     nextElement = element.next();
+
+    //     if (nextElement === nextHeader) {
+    //       return;
+    //     }
+        
+    //     if (nextElement.hasClass('.moses-ignore')) {
+    //       subheaderArray.push(nextElement);
+    //     }
+
+    //     goToNextElement(nextElement);
+    //   }
+
+    //   goToNextElement(element);
+    // });
+  });
+
+
 
   console.log(headersArray);
 
