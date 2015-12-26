@@ -32,7 +32,7 @@
   <div class="moses-color">#39332C</div>
 </div>
 
-<h2>Complementary Colors</h2>
+<h2 class="moses-subheader">Complementary Colors</h2>
 
 <div class="moses-palette">
   <p>$brand-success</p>
@@ -50,7 +50,7 @@
 
 <!-- color boxes -->
 
-<h2>Text Colors</h2>
+<h2 class="moses-subheader">Text Colors</h2>
 
 <section class="moses-group">
   <p class="text-muted">Muted text</p>
@@ -61,7 +61,7 @@
   <p class="text-warning">Warning text</p>
 </section>
 
-<h2>Background Utilities</h2>
+<h2 class="moses-subheader">Background Utilities</h2>
 
 <section class="moses-group">
   <p class="bg-primary" style="padding:15px;">Primary Background</p>
@@ -71,26 +71,56 @@
   <p class="bg-warning" style="padding:15px;">Warning Background</p>
 </section>
 
-<%# <h2>Grid</h2> %>
+<h2>Grid</h2>
+
+
+<div class="moses-grid">
+  <div class="row">
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-6">.col-md-6</div>
+  </div>
+</div>
+
+
   <!-- grid display -->
 
 <h2>Icons</h2>
 
+<h3 class="moses-subheader">Basic</h3>
+
 <p>All icons are listed above and can only be used using the icon class.<i class="icon icon-info-with-circle"></i></p>
+
+<h3 class="moses-subheader">Fixed Width</h3>
 
 <p>In some cases you may want to use a fixed width e.g. in dropdown menus. In that case you can use the <span class="moses-code">icon-fw</span>class.</p>
 
-<ul class="list-unstyled">
-  <li>
-    <i class="icon icon-fw icon-add-user"></i> Add user
-  </li>
-  <li>
-    <i class="icon icon-fw icon-remove-user"></i> Remove user
-  </li>
-  <li>
-    <i class="icon icon-fw icon-info"></i> More information
-  </li>
-</ul>
+<h3 class="moses-subheader">Sizes</h3>
 
 <p>Icons can have different sizes:</p>
 
@@ -103,6 +133,7 @@
   <i class="icon icon-5x icon-add-user"></i>
 </div>
 
+<h3 class="moses-subheader">Spinning</h3>
 <span>They can even spin! <i class="icon icon-spin icon-spinner"></i></span>
 
 <p>
@@ -110,16 +141,18 @@
   <span class="sg-code">.icon-li</span> on the icon inside the <span class="sg-code">&lt;li&gt;</span> element.
 </p>
 
-<ul class="icon-ul">
-    <li>
-    <i class="icon icon-li icon-add-user"></i> Test
-    </li>
-    <li>
-    <i class="icon icon-li icon-remove-user"></i> Test
-    </li>
-    <li>
-    <i class="icon icon-li icon-info"></i> Test
-    </li>
+<h3 class="moses-subheader">Icon List</h3>
+
+<ul class="list-unstyled">
+  <li>
+    <i class="icon icon-fw icon-add-user"></i> Add user
+  </li>
+  <li>
+    <i class="icon icon-fw icon-remove-user"></i> Remove user
+  </li>
+  <li>
+    <i class="icon icon-fw icon-info"></i> More information
+  </li>
 </ul>
 
 <h2>Icon List</h2>
@@ -1998,6 +2031,9 @@
 </div>
 
 <h2>Buttons</h2>
+
+<h3 class="moses-subheader">Basic</h3>
+
 <div class="moses-group">
   <p>
       <button type="button" class="btn btn-default">Default</button>
@@ -2026,7 +2062,8 @@
   </p>
 </div>
 
-<h2>Button Groups</h2>
+<h3 class="moses-subheader">Button Groups</h3>
+
 <div class="moses-group">
   <div class="btn-toolbar" role="toolbar">
       <div class="btn-group btn-group-lg">
@@ -2070,7 +2107,8 @@
   </div>
 </div>
 
-<h2>Other Button Types</h2>
+<h3 class="moses-subheader">Justified</h3>
+
 <div class="moses-group">
   <div class="btn-group btn-group-justified">
       <div class="btn-group">
@@ -2084,6 +2122,8 @@
       </div>
   </div>
 </div>
+
+<h3 class="moses-subheader">Vertical</h3>
 
 <div class="moses-group">
   <div class="btn-group-vertical">
@@ -2101,6 +2141,8 @@
       <button type="button" class="btn btn-default">Button</button>
   </div>
 </div>
+
+<h3 class="moses-subheader">Dropdown</h3>
 
 <div class="moses-group">
   <div class="row">
@@ -2290,6 +2332,9 @@
 </div>
 
 <h2>Definition Lists</h2>
+
+<h3 class="moses-subheader">Vertical</h3>
+
 <div class="moses-group">
   <dl>
     <dt>Description lists</dt>
@@ -2301,6 +2346,8 @@
     <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
   </dl>
 </div>
+
+<h3 class="moses-subheader">Horizontal</h3>
 
 <div class="moses-group">
   <dl class="dl-horizontal">
@@ -2358,7 +2405,8 @@
 </div>
 
 <h2>Flags</h2>
-<p>Inline with text</p>
+
+<h3 class="moses-subheader">Inline with Text</h3>
 
 <div class="moses-group">
   <h1><i class="flag-icon flag-icon-gr"></i> H1 header</h1>
@@ -2367,7 +2415,7 @@
   <p>Paragraph <i class="flag-icon flag-icon-gb"></i> text</p>
 </div>
 
-<p>Any element</p>
+<h3 class="moses-subheader">Any Element</h3>
 
 <div class="row">
     <div class="col-sm-6">
@@ -2406,6 +2454,8 @@
 </div>
 
 <h2>Tables</h2>
+
+<h3 class="moses-subheader">Normal Usage</h3>
 
 <div class="moses-group">
   <table class="table table-hover">
@@ -2449,7 +2499,9 @@
       </tr>
       </tbody>
   </table>
-  <h3>Striped &amp; condensed table with alternating backgrounds</h3>
+
+  <h3 class="moses-subheader">Striped &amp; condensed table with alternating backgrounds</h3>
+
   <table class="table table-striped table-bordered table-condensed">
       <thead>
       <tr>
@@ -2474,6 +2526,9 @@
 </div>
 
 <h2>Truncate</h2>
+
+<h3 class="moses-subheader">Truncate without options</h3>
+
 <div class="moses-group">
   <p eo-truncate style="max-height: 40px;">
       Barcass ridetis, tanquam ferox cedrium. Nobilis animalis aegre vitares mortem est. Competition de ferox tata,
@@ -2484,7 +2539,7 @@
   </p>
 </div>
 
-<h2 class="moses-ignore">with options:</h2>
+<h3 class="moses-subheader">with options:</h3>
 
 <div class="moses-group">
   <p eo-truncate eo-truncate-options="{after: 'a.readmore'}" style="max-height: 40px;">
@@ -2496,9 +2551,7 @@
   </p>
 </div>
 
-<div class="moses-ignore">
-<h2>Truncate without starting as collapsed:</h2>
-</div>
+<h3 class="moses-subheader">Truncate without starting as collapsed:</h3>
 
 <div class="moses-group">
   <p eo-truncate eo-truncate-options="{collapsed: false, after: 'a.readmore'}" style="max-height: 40px;">
@@ -2510,10 +2563,7 @@
   </p>
 </div>
 
-<div class="moses-ignore">
-<h2>Truncate without collapsibility:</h2>
-</div>
-
+<h3 class="moses-subheader">Truncate without collapsibility:</h3>
 
 <div class="moses-group">
   <p eo-truncate eo-truncate-options="{collapsible: false, after: 'a.readmore'}" style="max-height: 40px;">
@@ -2525,32 +2575,26 @@
   </p>
 </div>
 
-<div class="moses-ignore">
-<h2>Full documentation:</h2>
-<p>All the options from http://dotdotdot.frebsite.nl/ can be passed in.</p>
-</div>
+<h3 class="moses-subheader">Full documentation:</h3>
+<p>All the options from <a href="http://dotdotdot.frebsite.nl">http://dotdotdot.frebsite.nl/</a> can be passed in.</p>
 
 <h2>Typography</h2>
 
-<div class="moses-ignore">
-  <h2>Blockquotes</h2>
-</div>
+<h3 class="moses-subheader">Blockquote</h3>
 
 <blockquote>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<p>reverse:</p>
+<h3 class="moses-subheader">Blockquote Reverse:</h3>
 
 <blockquote class="blockquote-reverse">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<div class="moses-ignore">
-  <h2>Emphasis</h2>
-</div>
+<h3 class="moses-subheader">Emphasis</h3>
 
 <div class="moses-group">
   <strong>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</strong>
@@ -2560,9 +2604,7 @@
   <small>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</small>
 </div>
 
-<div class="moses-ignore">
-  <h2>Lists</h2>
-</div>
+<h3 class="moses-subheader">Lists</h3>
 
 <ul class="list-inline">
   <li>List Item 1</li>
@@ -2608,9 +2650,7 @@
   <li>List Item 4</li>
 </ul>
 
-<div class="moses-ignore">
-  <h2>Body Copy</h2>
-</div>
+<h3 class="moses-subheader">Body Copy</h3>
 
 <div class="moses-group">
   <p class="lead">Lead paragraph: vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
@@ -2625,9 +2665,7 @@
   <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
 </div>
 
-<div class="moses-ignore">
-  <h2>Headings</h2>
-</div>
+<h3 class="moses-subheader">Headings</h3>
 
 <div class="moses-group">
   <h1>Heading 1</h1>
@@ -2638,9 +2676,7 @@
   <h6>Heading 6</h6>
 </div>
 
-<div class="moses-ignore">
-  <h2>Text Alignment</h2>
-</div>
+<h3 class="moses-subheader">Text Alignment</h3>
 
 <div class="moses-group">
   <p class="text-left">Left Alignment</p>

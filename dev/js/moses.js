@@ -23,10 +23,59 @@ document.getElementsByTagName("head")[0].appendChild(fileref);
 
 //actual code:
 $(document).ready(function() {
+  // var rootStyleGuidePath = '/examples/custom'; //FIX THIS WITH REAL LOGIC
+
   // $("body").prepend()
   // SyntaxHighlighter.autoloader('htmlbrush', 'http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shBrushXml.js')
   //add here the code parser script tag
   // then select every tag and put them in the area
+
+  //styleguide name assignment:
+  var href = document.location.href.replace('http://', '');
+  href = href.replace('https://', '');
+
+  var targetPage, rootStyleGuidePath,
+      name = href.replace(/\/.*/g, ''),
+      path = href.replace(name, '');
+
+  name = name.replace(name[0], name[0].toUpperCase());
+
+  //styleguide finding current page:
+  function assignNavigationTarget () {
+    possibleTargets = ['components', 'foundation', 'templates'];
+
+    possibleTargets.forEach( function (e, i) {
+      if (path.indexOf(e.toLowerCase()) > -1)  {
+        targetPage = e;
+        if (path.match(/\./)) {
+          rootStyleGuidePath = path.substring(0, path.lastIndexOf('/') - 2);
+        } else {
+          rootStyleGuidePath = path.replace(targetPage, '');
+        }
+
+        //rootStyleguide path should be before the targetPage
+      }
+    });
+
+    if (typeof targetPage === "undefined") {
+      targetPage = 'foundation';
+      //check if the link has any dots
+      if (path.match(/\./)) {
+        rootStyleGuidePath = path.substring(0, path.lastIndexOf('/') - 2);
+      } else {  
+        rootStyleGuidePath = path;
+      } // rootStyleGuide path should be before the index extensionless place
+    }
+  }
+
+
+
+  assignNavigationTarget();
+
+  console.log(targetPage);
+  console.log($("#moses-" + targetPage));
+
+
 
   var createScriptTag = function () {
     return $('<script/>', {
@@ -35,17 +84,19 @@ $(document).ready(function() {
     });
   }
 
+  //do the subheader logic, FIX header link bug
+
   //navigation html:
   $("#styleguide").parent().append("<moses-navigation>
     <moses-left-navigation>
       <ul id='moses-foundation'>
-        <li><a href='/examples/bootstrap/foundation'>Foundation</a></li>
+        <li><a href='" + rootStyleGuidePath + "/foundation'>Foundation</a></li>
       </ul>
       <ul id='moses-components'>
-        <li><a href='/examples/bootstrap/components'>Components</a></li>
+        <li><a href='" + rootStyleGuidePath + "/components'>Components</a></li>
       </ul>
       <ul id='moses-templates'>
-        <li><a href='/examples/bootstrap/templates'>Templates</a></li>
+        <li><a href='" + rootStyleGuidePath + "/templates'>Templates</a></li>
       </ul>
     </moses-left-navigation>
     <moses-top-fixed-navigation class='opened'>
@@ -58,6 +109,8 @@ $(document).ready(function() {
     </moses-top-static-navigation>
       </moses-navigation>");
 
+  $("moses-top-fixed-navigation").find('h1').text(name + " Styleguide");
+
   //navigation toggle:
   $("moses-top-fixed-navigation").find(".fa").on("click", function(e) {
     $(this).toggleClass("fa-bars").toggleClass("fa-times");
@@ -66,37 +119,18 @@ $(document).ready(function() {
     $("moses-top-fixed-navigation").toggleClass("opened");
   });
 
-  //styleguide name assignment:
-  var href = document.location.href.replace('http://', '');
-  href = href.replace('https://', '');
-
-  var targetPage,
-      name = href.replace(/\/.*/g, ''),
-      path = href.replace(name, '');
-
-  name = name.replace(name[0], name[0].toUpperCase());
-
-  $("moses-top-fixed-navigation").find('h1').text(name + " Styleguide");
-
-  //styleguide finding current page:
-  function assignNavigationTarget () {
-    possibleTargets = ['components', 'foundation', 'templates'];
-
-    possibleTargets.forEach( function (e, i) {
-      if (path.indexOf(e.toLowerCase()) > -1)  {
-        targetPage = e;
-      }
-    });
-
-    if (typeof targetPage === "undefined") {
-      targetPage = 'foundation';
+  //Listen 'ESC' key to untoggle left navigation:
+  $(document).keyup(function(e){
+    console.log("called");
+    if(e.which == 27){
+      $("moses-top-fixed-navigation").find(".fa").toggleClass("fa-bars").toggleClass("fa-times");
+      $("moses-left-navigation").toggle();
+      $("#styleguide").toggleClass("closed");
+      $("moses-top-fixed-navigation").toggleClass("opened");
     }
-  }
+  });
 
-  assignNavigationTarget();
 
-  console.log(targetPage);
-  console.log($("#moses-" + targetPage));
 
   // localStorage.setItem("moses:routes", JSON.stringify({ "lol": "test", "myvar": "this works" }));  
 
@@ -106,16 +140,16 @@ $(document).ready(function() {
       subheaderArray = [];
 
   var filteredDom = writtenScope
-                .not("h1").not("h2").not("p")
-                .not("script").not("style").not("link");
+                .not("h1").not("h2").not("h3").not("p")
+                .not("script").not("style").not("link").not(".moses-ignore").not(".moses-subheader");
 
   function findHeaders (callback) {
     var idCount = 0;
   
-    for (i=1; i<=3; i++) {
+    for (i=1; i<=4; i++) {
 
-      var ref_array = writtenScope.not(".moses-ignore").filter("h" + i),
-          ref_subheader_array = writtenScope.filter(".moses-ignore").filter("h" + i);
+      var ref_array = writtenScope.not("moses-ignore").not(".moses-subheader").filter("h" + i),
+          ref_subheader_array = writtenScope.filter(".moses-subheader").filter("h" + i);
 
       $.each(ref_array, function(i, e) {
         idCount = idCount + 1;

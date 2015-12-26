@@ -70,6 +70,9 @@ TODO:
 - styleguide name logic from domain (done)
 - navigation populating + localstorage caching (mostly done)
 - maybe use http://prismjs.com/ (todo - low priority)
+- add ESC keylistener to untoggle navigation
+- implement the rootStyleguidePath correctly in RegEX
+- inplement subheaderLists
 
 
 special classes:
@@ -83,4 +86,8 @@ special classes:
 .moses-color / palette
 
 .moses-grid
+
+.moses-code
+
+.moses-subheader
 

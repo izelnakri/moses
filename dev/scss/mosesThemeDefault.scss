@@ -129,17 +129,15 @@ h4:before, h5:before, h6:before {
   border-radius: 0;
 }
 
-
 //title styling:
-.moses-title, h1.moses-ignore, h2.moses-ignore, h3.moses-ignore,
-h4.moses-ignore, h5.moses-ignore, h6.moses-ignore {
+.moses-title, .moses-subheader {
   padding-bottom: 12px;
   border-bottom: 1px solid lightgrey;
 }
 
 //moses-palette styling: 
 .moses-palette {
-  .moses-grid {
+  .moses-grid { //redundandy naming
     text-align: center;
     width: 16%;
     font-size: 16px;
@@ -156,6 +154,16 @@ h4.moses-ignore, h5.moses-ignore, h6.moses-ignore {
   }
 
 }
+
+.moses-grid { //clashes
+  margin: 0px 10px;
+  .row > div {
+    background-color: #ddd;
+    border: solid 1px grey;
+    padding: .5em;
+  }
+}
+   
 
 //moses-icon-list styling
 .moses-icon-list {
