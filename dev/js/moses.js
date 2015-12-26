@@ -44,15 +44,14 @@ $(document).ready(function() {
   function assignNavigationTarget () {
     possibleTargets = ['components', 'foundation', 'templates'];
 
+    path = parseDirectoryURL(path);
+
+    console.log('path is ' + path);
+
     possibleTargets.forEach( function (e, i) {
       if (path.indexOf(e.toLowerCase()) > -1)  {
         targetPage = e;
-        if (path.match(/\./)) {
-          rootStyleGuidePath = path.substring(0, path.lastIndexOf('/') - 2);
-        } else {
-          rootStyleGuidePath = path.replace(targetPage, '');
-        }
-
+        path = path.replace(targetPage, '');
         //rootStyleguide path should be before the targetPage
       }
     });
@@ -60,12 +59,29 @@ $(document).ready(function() {
     if (typeof targetPage === "undefined") {
       targetPage = 'foundation';
       //check if the link has any dots
-      if (path.match(/\./)) {
-        rootStyleGuidePath = path.substring(0, path.lastIndexOf('/') - 2);
-      } else {  
-        rootStyleGuidePath = path;
-      } // rootStyleGuide path should be before the index extensionless place
     }
+
+    path = parseDirectoryURL(path); //we call this twice on purpose!!
+    console.log('path is ' + path);
+
+    rootStyleGuidePath = path;
+  }
+
+  function parseDirectoryURL (path) {
+    if (path.match('#')) {
+      path = path.substring(0, path.lastIndexOf('#'));
+    }
+
+    if (path.match(/\./)) { // this is for extension
+      path = path.substring(0, path.lastIndexOf('/'));
+    }
+
+    if(path.lastIndexOf('/') === path.length - 1) {
+      path = path.substring(0, path.length - 1);
+    }
+    //maybe also add one just for index
+
+    return path;
   }
 
 
@@ -129,8 +145,6 @@ $(document).ready(function() {
       $("moses-top-fixed-navigation").toggleClass("opened");
     }
   });
-
-
 
   // localStorage.setItem("moses:routes", JSON.stringify({ "lol": "test", "myvar": "this works" }));  
 

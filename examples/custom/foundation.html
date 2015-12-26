@@ -1,0 +1,2742 @@
+<head>
+  <link href="//www.eyeopen.nl/frontend/css/frontend.css" rel="stylesheet">
+
+  <script src="//www.eyeopen.nl/frontend/js/vendor.js"></script>
+  <script src="//www.eyeopen.nl/frontend/js/plugins.js"></script>
+  <script src="//www.eyeopen.nl/frontend/js/frontend.js"></script>
+  <script src="//www.eyeopen.nl/frontend/js/copy.js"></script>
+  <script src="//www.eyeopen.nl/frontend/js/tracking-scripts.js"></script>
+</head>
+
+<body id="styleguide">
+  <!-- missing: subheader without being on the navigation(moses-ignore on header tags), sg-code style something, define moses-ignore on h2, BUGFIX ON THE HEADER TITLE, subtitles area, better styling, better code, better code display -->
+
+<h2>Colors</h2>
+<div class="moses-palette">
+  <p>$brand-primary</p>
+  <div class="moses-color">#F89E1E</div>
+
+  <p>$gray-lighter</p>
+  <div class="moses-color">#C6C6C6</div>
+
+  <p>$gray-light</p>
+  <div class="moses-color">#999999</div>
+
+  <p>$gray</p>
+  <div class="moses-color">#666666</div>
+
+  <p>$gray-dark</p>
+  <div class="moses-color">#333333</div>
+
+  <p>$gray-darker</p>
+  <div class="moses-color">#39332C</div>
+</div>
+
+<h2 class="moses-subheader">Complementary Colors</h2>
+
+<div class="moses-palette">
+  <p>$brand-success</p>
+  <div class="moses-color">#43B19C</div>
+
+  <p>$brand-info</p>
+  <div class="moses-color">#274361</div>
+
+  <p>$brand-warning</p>
+  <div class="moses-color">#FDDE55</div>
+
+  <p>$brand-danger</p>
+  <div class="moses-color">#EE444D</div>
+</div>
+
+<!-- color boxes -->
+
+<h2 class="moses-subheader">Text Colors</h2>
+
+<section class="moses-group">
+  <p class="text-muted">Muted text</p>
+  <p class="text-primary">Primary text</p>
+  <p class="text-info">Info text</p>
+  <p class="text-success">Success text</p>
+  <p class="text-danger">Danger text</p>
+  <p class="text-warning">Warning text</p>
+</section>
+
+<h2 class="moses-subheader">Background Utilities</h2>
+
+<section class="moses-group">
+  <p class="bg-primary" style="padding:15px;">Primary Background</p>
+  <p class="bg-info" style="padding:15px;">Info Background</p>
+  <p class="bg-success" style="padding:15px;">Success Background</p>
+  <p class="bg-danger" style="padding:15px;">Danger Background</p>
+  <p class="bg-warning" style="padding:15px;">Warning Background</p>
+</section>
+
+<h2>Grid</h2>
+
+
+<div class="moses-grid">
+  <div class="row">
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-6">.col-md-6</div>
+  </div>
+</div>
+
+
+  <!-- grid display -->
+
+<h2>Icons</h2>
+
+<h3 class="moses-subheader">Basic</h3>
+
+<p>All icons are listed above and can only be used using the icon class.<i class="icon icon-info-with-circle"></i></p>
+
+<h3 class="moses-subheader">Fixed Width</h3>
+
+<p>In some cases you may want to use a fixed width e.g. in dropdown menus. In that case you can use the <span class="moses-code">icon-fw</span>class.</p>
+
+<h3 class="moses-subheader">Sizes</h3>
+
+<p>Icons can have different sizes:</p>
+
+<div class="moses-group">
+  <i class="icon icon-add-user"></i>
+  <i class="icon icon-lg icon-add-user"></i>
+  <i class="icon icon-2x icon-add-user"></i>
+  <i class="icon icon-3x icon-add-user"></i>
+  <i class="icon icon-4x icon-add-user"></i>
+  <i class="icon icon-5x icon-add-user"></i>
+</div>
+
+<h3 class="moses-subheader">Spinning</h3>
+<span>They can even spin! <i class="icon icon-spin icon-spinner"></i></span>
+
+<p>
+  If you want to create a list. Add the <span class="sg-code">.icon-ul</span> class on the <span class="sg-code">&lt;ul&gt;</span> element and add the
+  <span class="sg-code">.icon-li</span> on the icon inside the <span class="sg-code">&lt;li&gt;</span> element.
+</p>
+
+<h3 class="moses-subheader">Icon List</h3>
+
+<ul class="list-unstyled">
+  <li>
+    <i class="icon icon-fw icon-add-user"></i> Add user
+  </li>
+  <li>
+    <i class="icon icon-fw icon-remove-user"></i> Remove user
+  </li>
+  <li>
+    <i class="icon icon-fw icon-info"></i> More information
+  </li>
+</ul>
+
+<h2>Icon List</h2>
+
+<ul class="moses-icon-list"> 
+ <li>
+ <i class="icon icon-add-user"></i>icon-add-user   
+ </li>
+ <li>
+ <i class="icon icon-remove-user"></i>icon-remove-user   
+ </li>
+ <li>
+ <i class="icon icon-info-width-circle"></i>icon-info-with-circle   
+ </li>
+ <li>
+ <i class="icon icon-info"></i>icon-info  
+ </li>
+ <li>
+ <i class="icon icon-user"></i>icon-user   
+ </li>
+ <li>
+ <i class="icon icon-users"></i>icon-users   
+ </li>
+ <li>
+ <i class="icon icon-video"></i>icon-video   
+ </li>
+ <li>
+ <i class="icon icon-coin"></i>icon-coin  
+ </li>
+ <li>
+ <i class="icon icon-cat"></i>icon-cat   
+ </li>
+ <li>
+ <i class="icon icon-bird"></i>icon-bird   
+ </li>
+ <li>
+ <i class="icon icon-creditcard"></i>icon-creditcard   
+ </li>
+ <li>
+ <i class="icon icon-email"></i>icon-email  
+ </li>
+ <li>
+ <i class="icon icon-piggy-bank"></i>icon-piggy-bank   
+ </li>
+ <li>
+ <i class="icon icon-ninja-happy"></i>icon-ninja-happy   
+ </li>
+ <li>
+ <i class="icon icon-ninja-mad"></i>icon-ninja-mad   
+ </li>
+ <li>
+ <i class="icon icon-hand-coin"></i>icon-hand-coin  
+ </li>
+ <li>
+ <i class="icon icon-user-coin"></i>icon-user-coin   
+ </li>
+ <li>
+ <i class="icon icon-calculator"></i>icon-calculator   
+ </li>
+ <li>
+ <i class="icon icon-glass"></i>icon-glass   
+ </li>
+ <li>
+ <i class="icon icon-music"></i>icon-music  
+ </li>
+ <li>
+ <i class="icon icon-search"></i>icon-search   
+ </li>
+ <li>
+ <i class="icon icon-envelope-o"></i>icon-envelope-o   
+ </li>
+ <li>
+ <i class="icon icon-heart"></i>icon-heart   
+ </li>
+ <li>
+ <i class="icon icon-star"></i>icon-star  
+ </li>
+ <li>
+ <i class="icon icon-star-o"></i>icon-star-o   
+ </li>
+ <li>
+ <i class="icon icon-film"></i>icon-film   
+ </li>
+ <li>
+ <i class="icon icon-th-large"></i>icon-th-large   
+ </li>
+ <li>
+ <i class="icon icon-th"></i>icon-th  
+ </li>
+ <li>
+ <i class="icon icon-th-list"></i>icon-th-list   
+ </li>
+ <li>
+ <i class="icon icon-check"></i>icon-check   
+ </li>
+ <li>
+ <i class="icon icon-close"></i>icon-close   
+ </li>
+ <li>
+ <i class="icon icon-remove"></i>icon-remove  
+ </li>
+ <li>
+ <i class="icon icon-times"></i>icon-times   
+ </li>
+ <li>
+ <i class="icon icon-search-plus"></i>icon-search-plus   
+ </li>
+ <li>
+ <i class="icon icon-search-minus"></i>icon-search-minus   
+ </li>
+ <li>
+ <i class="icon icon-power-off"></i>icon-power-off  
+ </li>
+ <li>
+ <i class="icon icon-signal"></i>icon-signal   
+ </li>
+ <li>
+ <i class="icon icon-cog"></i>icon-cog   
+ </li>
+ <li>
+ <i class="icon icon-gear"></i>icon-gear   
+ </li>
+ <li>
+ <i class="icon icon-trash-o"></i>icon-trash-o  
+ </li>
+ <li>
+ <i class="icon icon-home"></i>icon-home   
+ </li>
+ <li>
+ <i class="icon icon-file-o"></i>icon-file-o   
+ </li>
+ <li>
+ <i class="icon icon-clock-o"></i>icon-clock-o   
+ </li>
+ <li>
+ <i class="icon icon-road"></i>icon-road  
+ </li>
+ <li>
+ <i class="icon icon-download"></i>icon-download   
+ </li>
+ <li>
+ <i class="icon icon-arrow-circle-o-down"></i>icon-arrow-circle-o-down   
+ </li>
+ <li>
+ <i class="icon icon-arrow-circle-o-up"></i>icon-arrow-circle-o-up   
+ </li>
+ <li>
+ <i class="icon icon-inbox"></i>icon-inbox  
+ </li>
+ <li>
+ <i class="icon icon-play-circle-o"></i>icon-play-circle-o   
+ </li>
+ <li>
+ <i class="icon icon-repeat"></i>icon-repeat   
+ </li>
+ <li>
+ <i class="icon icon-rotate-right"></i>icon-rotate-right   
+ </li>
+ <li>
+ <i class="icon icon-refresh"></i>icon-refresh  
+ </li>
+ <li>
+ <i class="icon icon-list-alt"></i>icon-list-alt   
+ </li>
+ <li>
+ <i class="icon icon-lock"></i>icon-lock   
+ </li>
+ <li>
+ <i class="icon icon-flag"></i>icon-flag   
+ </li>
+ <li>
+ <i class="icon icon-headphones"></i>icon-headphones  
+ </li>
+ <li>
+ <i class="icon icon-volume-off"></i>icon-volume-off   
+ </li>
+ <li>
+ <i class="icon icon-volume-down"></i>icon-volume-down   
+ </li>
+ <li>
+ <i class="icon icon-volume-up"></i>icon-volume-up   
+ </li>
+ <li>
+ <i class="icon icon-qrcode"></i>icon-qrcode  
+ </li>
+ <li>
+ <i class="icon icon-barcode"></i>icon-barcode   
+ </li>
+ <li>
+ <i class="icon icon-tag"></i>icon-tag   
+ </li>
+ <li>
+ <i class="icon icon-tags"></i>icon-tags   
+ </li>
+ <li>
+ <i class="icon icon-book"></i>icon-book  
+ </li>
+ <li>
+ <i class="icon icon-bookmark"></i>icon-bookmark   
+ </li>
+ <li>
+ <i class="icon icon-print"></i>icon-print   
+ </li>
+ <li>
+ <i class="icon icon-camera"></i>icon-camera   
+ </li>
+ <li>
+ <i class="icon icon-font"></i>icon-font  
+ </li>
+ <li>
+ <i class="icon icon-bold"></i>icon-bold   
+ </li>
+ <li>
+ <i class="icon icon-italic"></i>icon-italic   
+ </li>
+ <li>
+ <i class="icon icon-text-height"></i>icon-text-height   
+ </li>
+ <li>
+ <i class="icon icon-text-width"></i>icon-text-width  
+ </li>
+ <li>
+ <i class="icon icon-align-left"></i>icon-align-left   
+ </li>
+ <li>
+ <i class="icon icon-align-center"></i>icon-align-center   
+ </li>
+ <li>
+ <i class="icon icon-align-right"></i>icon-align-right   
+ </li>
+ <li>
+ <i class="icon icon-align-justify"></i>icon-align-justify  
+ </li>
+ <li>
+ <i class="icon icon-list"></i>icon-list   
+ </li>
+ <li>
+ <i class="icon icon-dedent"></i>icon-dedent   
+ </li>
+ <li>
+ <i class="icon icon-outdent"></i>icon-outdent   
+ </li>
+ <li>
+ <i class="icon icon-indent"></i>icon-indent  
+ </li>
+ <li>
+ <i class="icon icon-camera"></i>icon-video-camera   
+ </li>
+ <li>
+ <i class="icon icon-image"></i>icon-image   
+ </li>
+ <li>
+ <i class="icon icon-phote"></i>icon-photo   
+ </li>
+ <li>
+ <i class="icon icon-picture-o"></i>icon-picture-o  
+ </li>
+ <li>
+ <i class="icon icon-pencil"></i>icon-pencil   
+ </li>
+ <li>
+ <i class="icon icon-map-marker"></i>icon-map-marker   
+ </li>
+ <li>
+ <i class="icon icon-adjust"></i>icon-adjust   
+ </li>
+ <li>
+ <i class="icon icon-tint"></i>icon-tint  
+ </li>
+ <li>
+ <i class="icon icon-edit"></i>icon-edit   
+ </li>
+ <li>
+ <i class="icon icon-pencil-square-o"></i>icon-pencil-square-o   
+ </li>
+ <li>
+ <i class="icon icon-share-square-o"></i>icon-share-square-o   
+ </li>
+ <li>
+ <i class="icon icon-check-square-o"></i>icon-check-square-o  
+ </li>
+ <li>
+ <i class="icon icon-arrows"></i>icon-arrows   
+ </li>
+ <li>
+ <i class="icon icon-step-backward"></i>icon-step-backward   
+ </li>
+ <li>
+ <i class="icon icon-fast-backward"></i>icon-fast-backward   
+ </li>
+ <li>
+ <i class="icon icon-backward"></i>icon-backward  
+ </li>
+ <li>
+ <i class="icon icon-play"></i>icon-play   
+ </li>
+ <li>
+ <i class="icon icon-pause"></i>icon-pause   
+ </li>
+ <li>
+ <i class="icon icon-stop"></i>icon-stop   
+ </li>
+ <li>
+ <i class="icon icon-forward"></i>icon-forward  
+ </li>
+ <li>
+ <i class="icon icon-fast-forward"></i>icon-fast-forward   
+ </li>
+ <li>
+ <i class="icon icon-step-forward"></i>icon-step-forward   
+ </li>
+ <li>
+ <i class="icon icon-eject"></i>icon-eject   
+ </li>
+ <li>
+ <i class="icon icon-chevron-left"></i>icon-chevron-left  
+ </li>
+ <li>
+ <i class="icon icon-chevron-right"></i>icon-chevron-right   
+ </li>
+ <li>
+ <i class="icon icon-plus-circle"></i>icon-plus-circle   
+ </li>
+ <li>
+ <i class="icon icon-minus-circle"></i>icon-minus-circle   
+ </li>
+ <li>
+ <i class="icon icon-times-circle"></i>icon-times-circle  
+ </li>
+ <li>
+ <i class="icon icon-check-circle"></i>icon-check-circle   
+ </li>
+ <li>
+ <i class="icon icon-question-circle"></i>icon-question-circle   
+ </li>
+ <li>
+ <i class="icon icon-crosshairs"></i>icon-crosshairs   
+ </li>
+ <li>
+ <i class="icon icon-times-circle-o"></i>icon-times-circle-o  
+ </li>
+ <li>
+ <i class="icon icon-check-circle-o"></i>icon-check-circle-o   
+ </li>
+ <li>
+ <i class="icon icon-ban"></i>icon-ban   
+ </li>
+ <li>
+ <i class="icon icon-arrow-left"></i>icon-arrow-left   
+ </li>
+ <li>
+ <i class="icon icon-arrow-right"></i>icon-arrow-right  
+ </li>
+ <li>
+ <i class="icon icon-arrow-up"></i>icon-arrow-up   
+ </li>
+ <li>
+ <i class="icon icon-arrow-down"></i>icon-arrow-down   
+ </li>
+ <li>
+ <i class="icon icon-mail-forward"></i>icon-mail-forward   
+ </li>
+ <li>
+ <i class="icon icon-share"></i>icon-share  
+ </li>
+ <li>
+ <i class="icon icon-expand"></i>icon-expand   
+ </li>
+ <li>
+ <i class="icon icon-compress"></i>icon-compress   
+ </li>
+ <li>
+ <i class="icon icon-plus"></i>icon-plus   
+ </li>
+ <li>
+ <i class="icon icon-minus"></i>icon-minus  
+ </li>
+ <li>
+ <i class="icon icon-asterisk"></i>icon-asterisk   
+ </li>
+ <li>
+ <i class="icon icon-exclamation-circle"></i>icon-exclamation-circle   
+ </li>
+ <li>
+ <i class="icon icon-gift"></i>icon-gift   
+ </li>
+ <li>
+ <i class="icon icon-leaf"></i>icon-leaf  
+ </li>
+ <li>
+ <i class="icon icon-fire"></i>icon-fire   
+ </li>
+ <li>
+ <i class="icon icon-eye"></i>icon-eye   
+ </li>
+ <li>
+ <i class="icon icon-eye-slash"></i>icon-eye-slash   
+ </li>
+ <li>
+ <i class="icon icon-exclamation-triangle"></i>icon-exclamation-triangle  
+ </li>
+ <li>
+ <i class="icon icon-warning"></i>icon-warning   
+ </li>
+ <li>
+ <i class="icon icon-plane"></i>icon-plane   
+ </li>
+ <li>
+ <i class="icon icon-calendar"></i>icon-calendar   
+ </li>
+ <li>
+ <i class="icon icon-random"></i>icon-random  
+ </li>
+ <li>
+ <i class="icon icon-comment"></i>icon-comment   
+ </li>
+ <li>
+ <i class="icon icon-magnet"></i>icon-magnet   
+ </li>
+ <li>
+ <i class="icon icon-chevron-up"></i>icon-chevron-up   
+ </li>
+ <li>
+ <i class="icon icon-chevron-down"></i>icon-chevron-down  
+ </li>
+ <li>
+ <i class="icon icon-retweet"></i>icon-retweet   
+ </li>
+ <li>
+ <i class="icon icon-shopping-cart"></i>icon-shopping-cart   
+ </li>
+ <li>
+ <i class="icon icon-folder"></i>icon-folder   
+ </li>
+ <li>
+ <i class="icon icon-folder-open"></i>icon-folder-open  
+ </li>
+ <li>
+ <i class="icon icon-arrows-v"></i>icon-arrows-v   
+ </li>
+ <li>
+ <i class="icon icon-arrows-h"></i>icon-arrows-h   
+ </li>
+ <li>
+ <i class="icon icon-bar-chart"></i>icon-bar-chart   
+ </li>
+ <li>
+ <i class="icon icon-bar-chart-o"></i>icon-bar-chart-o  
+ </li>
+ <li>
+ <i class="icon icon-twitter-square"></i>icon-twitter-square   
+ </li>
+ <li>
+ <i class="icon icon-facebook-square"></i>icon-facebook-square   
+ </li>
+ <li>
+ <i class="icon icon-camera-retro"></i>icon-camera-retro   
+ </li>
+ <li>
+ <i class="icon icon-key"></i>icon-key  
+ </li>
+ <li>
+ <i class="icon icon-cogs"></i>icon-cogs   
+ </li>
+ <li>
+ <i class="icon icon-gears"></i>icon-gears   
+ </li>
+ <li>
+ <i class="icon icon-comments"></i>icon-comments   
+ </li>
+ <li>
+ <i class="icon icon-thumbs-o-up"></i>icon-thumbs-o-up  
+ </li>
+ <li>
+ <i class="icon icon-thumbs-o-down"></i>icon-thumbs-o-down   
+ </li>
+ <li>
+ <i class="icon icon-star-half"></i>icon-star-half   
+ </li>
+ <li>
+ <i class="icon icon-hear-o"></i>icon-heart-o   
+ </li>
+ <li>
+ <i class="icon icon-sign-out"></i>icon-sign-out  
+ </li>
+ <li>
+ <i class="icon icon-linkedin-square"></i>icon-linkedin-square   
+ </li>
+ <li>
+ <i class="icon icon-thumb-tack"></i>icon-thumb-tack   
+ </li>
+ <li>
+ <i class="icon icon-external-link"></i>icon-external-link   
+ </li>
+ <li>
+ <i class="icon icon-sign-in"></i>icon-sign-in  
+ </li>
+ <li>
+ <i class="icon icon-trophy"></i>icon-trophy   
+ </li>
+ <li>
+ <i class="icon icon-github-square"></i>icon-github-square   
+ </li>
+ <li>
+ <i class="icon icon-upload"></i>icon-upload   
+ </li>
+ <li>
+ <i class="icon icon-lemon-o"></i>icon-lemon-o  
+ </li>
+ <li>
+ <i class="icon icon-phone"></i>icon-phone   
+ </li>
+ <li>
+ <i class="icon icon-square-o"></i>icon-square-o   
+ </li>
+ <li>
+ <i class="icon icon-bookmark-o"></i>icon-bookmark-o   
+ </li>
+ <li>
+ <i class="icon icon-phone-square"></i>icon-phone-square  
+ </li>
+ <li>
+ <i class="icon icon-twitter"></i>icon-twitter   
+ </li>
+ <li>
+ <i class="icon icon-facebook"></i>icon-facebook   
+ </li>
+ <li>
+ <i class="icon icon-facebook-f"></i>icon-facebook-f   
+ </li>
+ <li>
+ <i class="icon icon-github"></i>icon-github  
+ </li>
+ <li>
+ <i class="icon icon-unlock"></i>icon-unlock   
+ </li>
+ <li>
+ <i class="icon icon-credit-card"></i>icon-credit-card   
+ </li>
+ <li>
+ <i class="icon icon-rss"></i>icon-rss   
+ </li>
+ <li>
+ <i class="icon icon-hdd-o"></i>icon-hdd-o  
+ </li>
+ <li>
+ <i class="icon icon-bullhorn"></i>icon-bullhorn   
+ </li>
+ <li>
+ <i class="icon icon-bell-o"></i>icon-bell-o   
+ </li>
+ <li>
+ <i class="icon icon-certificate"></i>icon-certificate   
+ </li>
+ <li>
+ <i class="icon icon-hand-o-right"></i>icon-hand-o-right  
+ </li>
+ <li>
+ <i class="icon icon-hand-o-left"></i>icon-hand-o-left   
+ </li>
+ <li>
+ <i class="icon icon-hand-o-up"></i>icon-hand-o-up   
+ </li>
+ <li>
+ <i class="icon icon-hand-o-down"></i>icon-hand-o-down   
+ </li>
+ <li>
+ <i class="icon icon-arrow-circle-left"></i>icon-arrow-circle-left  
+ </li>
+ <li>
+ <i class="icon icon-arrow-circle-right"></i>icon-arrow-circle-right   
+ </li>
+ <li>
+ <i class="icon icon-arrow-circle-up"></i>icon-arrow-circle-up   
+ </li>
+ <li>
+ <i class="icon icon-arrow-circle-down"></i>icon-arrow-circle-down   
+ </li>
+ <li>
+ <i class="icon icon-globe"></i>icon-globe  
+ </li>
+ <li>
+ <i class="icon icon-wrench"></i>icon-wrench   
+ </li>
+ <li>
+ <i class="icon icon-tasks"></i>icon-tasks   
+ </li>
+ <li>
+ <i class="icon icon-filter"></i>icon-filter   
+ </li>
+ <li>
+ <i class="icon icon-briefcase"></i>icon-briefcase  
+ </li>
+ <li>
+ <i class="icon icon-arrows-alt"></i>icon-arrows-alt   
+ </li>
+ <li>
+ <i class="icon icon-chain"></i>icon-chain   
+ </li>
+ <li>
+ <i class="icon icon-link"></i>icon-link   
+ </li>
+ <li>
+ <i class="icon icon-cloud"></i>icon-cloud  
+ </li>
+ <li>
+ <i class="icon icon-flask"></i>icon-flask   
+ </li>
+ <li>
+ <i class="icon icon-cut"></i>icon-cut   
+ </li>
+ <li>
+ <i class="icon icon-scissors"></i>icon-scissors   
+ </li>
+ <li>
+ <i class="icon icon-copy"></i>icon-copy  
+ </li>
+ <li>
+ <i class="icon icon-files-o"></i>icon-files-o   
+ </li>
+ <li>
+ <i class="icon icon-paperclip"></i>icon-paperclip   
+ </li>
+ <li>
+ <i class="icon icon-floppy-o"></i>icon-floppy-o   
+ </li>
+ <li>
+ <i class="icon icon-save"></i>icon-save  
+ </li>
+ <li>
+ <i class="icon icon-square"></i>icon-square   
+ </li>
+ <li>
+ <i class="icon icon-bars"></i>icon-bars   
+ </li>
+ <li>
+ <i class="icon icon-navicon"></i>icon-navicon   
+ </li>
+ <li>
+ <i class="icon icon-reorder"></i>icon-reorder  
+ </li>
+ <li>
+ <i class="icon icon-list-ul"></i>icon-list-ul   
+ </li>
+ <li>
+ <i class="icon icon-list-ol"></i>icon-list-ol   
+ </li>
+ <li>
+ <i class="icon icon-strikethrough"></i>icon-strikethrough   
+ </li>
+ <li>
+ <i class="icon icon-underline"></i>icon-underline  
+ </li>
+ <li>
+ <i class="icon icon-table"></i>icon-table   
+ </li>
+ <li>
+ <i class="icon icon-magic"></i>icon-magic   
+ </li>
+ <li>
+ <i class="icon icon-truck"></i>icon-truck   
+ </li>
+ <li>
+ <i class="icon icon-pinterest"></i>icon-pinterest  
+ </li>
+ <li>
+ <i class="icon icon-pinterest-square"></i>icon-pinterest-square   
+ </li>
+ <li>
+ <i class="icon icon-google-plus-square"></i>icon-google-plus-square   
+ </li>
+ <li>
+ <i class="icon icon-google-plus"></i>icon-google-plus   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-money  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-right  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-columns   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-unsorted   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-desc  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-asc   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-envelope  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-linkedin   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rotate-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-undo   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-gavel  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-legal   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-dashboard   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tachometer   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-comment-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-comments-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bolt   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-flash   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sitemap  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-umbrella   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-clipboard   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paste   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-lightbulb-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-exchange   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cloud-download   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cloud-upload   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-user-md  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-stethoscope   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-suitcase   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bell   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-coffee  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cutlery   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-text-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-building-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-hospital-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ambulance   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-medkit   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-fighter-jet   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-beer  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-h-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-plus-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-double-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-double-right  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-double-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-double-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-right  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-angle-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-desktop   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-laptop  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tablet   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-mobile   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-mobile-phone   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-circle-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-quote-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-quote-right   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-spinner   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-circle  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-mail-reply   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-reply   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-github-alt   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-folder-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-folder-open-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-smile-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-frown-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-meh-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-gamepad   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-keyboard-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-flag-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-flag-checkered  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-terminal   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-code   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-mail-reply-all   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-reply-all  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-star-half-empty   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-star-half-full   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-star-half-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-location-arrow  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-crop   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-code-fork   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-chain-broken   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-unlink  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-question   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-exclamation   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-superscript   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-subscript  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-eraser   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-puzzle-piece   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-microphone   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-microphone-slash  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-shield   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-calendar-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-fire-extinguisher   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rocket  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-maxcdn   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-chevron-circle-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-chevron-circle-right   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-chevron-circle-up  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-chevron-circle-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-html5   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-css3   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-anchor  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-unlock-alt   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bullseye   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ellipsis-h   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ellipsis-v  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rss-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-play-circle   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ticket   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-minus-square  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-minus-square-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-level-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-level-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-check-square  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-pencil-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-external-link-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-share-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-compass  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-square-o-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-toggle-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-square-o-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-toggle-up  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-square-o-right   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-toggle-right   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-eur   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-euro  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-gbp   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-dollar   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-usd   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-inr  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rupee   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cny   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-jpy   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rmb  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-yen   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rouble   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rub   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ruble  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-krw   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-won   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bitcoin   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-btc  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-text   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-alpha-asc   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-alpha-desc  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-amount-asc   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-amount-desc   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-numeric-asc   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sort-numeric-desc  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-thumbs-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-thumbs-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-youtube-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-youtube  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-xing   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-xing-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-youtube-play   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-dropbox  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-stack-overflow   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-instagram   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-flickr   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-adn  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bitbucket   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bitbucket-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tumblr   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tumblr-square  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-long-arrow-down   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-long-arrow-up   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-long-arrow-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-long-arrow-right  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-apple   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-windows   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-android   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-linux  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-dribbble   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-skype   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-foursquare   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-trello  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-female   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-male   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-gittip   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-gratipay  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sun-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-moon-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-archive   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bug  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-vk   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-weibo   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-renren   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-pagelines  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-stack-exchange   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-arrow-circle-o-right   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-arrow-circle-o-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-caret-square-o-left  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-toggle-left   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-dot-circle-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-wheelchair   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-vimeo-square  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-try   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-turkish-lira   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-plus-square-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-space-shuttle  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-slack   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-envelope-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-wordpress   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-openid  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bank   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-institution   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-university   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-graduation-cap  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-mortar-board   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-yahoo   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-google   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-reddit  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-reddit-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-stumbleupon-circle   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-stumbleupon   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-delicious  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-digg   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-pied-piper   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-pied-piper-alt   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-drupal  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-joomla   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-language   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-fax   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-building  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-child   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paw   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-spoon   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cube  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cubes   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-behance   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-behance-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-steam  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-steam-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-recycle   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-automobile   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-car  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cab   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-taxi   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tree   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-spotify  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-deviantart   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-soundcloud   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-database   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-pdf-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-word-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-excel-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-powerpoint-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-image-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-photo-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-picture-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-archive-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-zip-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-audio-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-sound-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-movie-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-video-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-file-code-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-vine   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-codepen   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-jsfiddle  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-life-bouy   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-life-buoy   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-life-ring   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-life-saver  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-support   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-circle-o-notch   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ra   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-rebel  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-empire   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-ge   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-git-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-git  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-hacker-news   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tencent-weibo   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-qq   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-wechat  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-weixin   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paper-plane   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-send   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paper-plane-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-send-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-history   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-circle-thin   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-genderless  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-header   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paragraph   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-sliders   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-share-alt  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-share-alt-square   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bomb   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-futbol-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-soccer-ball-o  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-tty   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-binoculars   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-plug   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-slideshare  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-twitch   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-yelp   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-newspaper-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-wifi  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paypal   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-google-wallet   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cc-visa   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cc-mastercard  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cc-discover   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cc-amex   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cc-paypal   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-cc-stripe  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bell-slash   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-bell-slash-o   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-trash   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-copyright  
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-at   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-eyedropper   
+ </li>
+ <li>
+ <i class="icon icon-"></i>icon-paint-brush   
+ </li>
+ <li>
+ <i class="icon icon-birthday-cake"></i>icon-birthday-cake  
+ </li>
+ <li>
+ <i class="icon icon-area-chart"></i>icon-area-chart   
+ </li>
+ <li>
+ <i class="icon icon-pie-chart"></i>icon-pie-chart   
+ </li>
+ <li>
+ <i class="icon icon-line-chart"></i>icon-line-chart   
+ </li>
+ <li>
+ <i class="icon icon-lastfm"></i>icon-lastfm  
+ </li>
+ <li>
+ <i class="icon icon-lastfm-square"></i>icon-lastfm-square   
+ </li>
+ <li>
+ <i class="icon icon-toggle-off"></i>icon-toggle-off   
+ </li>
+ <li>
+ <i class="icon icon-toggle-on"></i>icon-toggle-on   
+ </li>
+ <li>
+ <i class="icon icon-bicycle"></i>icon-bicycle  
+ </li>
+ <li>
+ <i class="icon icon-bus"></i>icon-bus   
+ </li>
+ <li>
+ <i class="icon icon-ioxhost"></i>icon-ioxhost   
+ </li>
+ <li>
+ <i class="icon icon-angellist"></i>icon-angellist   
+ </li>
+ <li>
+ <i class="icon icon-cc"></i>icon-cc  
+ </li>
+ <li>
+ <i class="icon icon-ils"></i>icon-ils   
+ </li>
+ <li>
+ <i class="icon icon-shekel"></i>icon-shekel   
+ </li>
+ <li>
+ <i class="icon icon-sheqel"></i>icon-sheqel   
+ </li>
+ <li>
+ <i class="icon icon-meanpath"></i>icon-meanpath  
+ </li>
+ <li>
+ <i class="icon icon-buysellads"></i>icon-buysellads   
+ </li>
+ <li>
+ <i class="icon icon-connectdevelop"></i>icon-connectdevelop   
+ </li>
+ <li>
+ <i class="icon icon-dashcube"></i>icon-dashcube   
+ </li>
+ <li>
+ <i class="icon icon-icon-forumbee"></i>icon-forumbee  
+ </li>
+ <li>
+ <i class="icon icon-leanpub"></i>icon-leanpub   
+ </li>
+ <li>
+ <i class="icon icon-sellsy"></i>icon-sellsy   
+ </li>
+ <li>
+ <i class="icon icon-shirtsinbuild"></i>icon-shirtsinbulk   
+ </li>
+ <li>
+ <i class="icon icon-simplybuild"></i>icon-simplybuilt  
+ </li>
+ <li>
+ <i class="icon icon-skyatlas"></i>icon-skyatlas   
+ </li>
+ <li>
+ <i class="icon icon-cart-plus"></i>icon-cart-plus   
+ </li>
+ <li>
+ <i class="icon icon-cart-arrow-down"></i>icon-cart-arrow-down   
+ </li>
+ <li>
+ <i class="icon icon-diamond"></i>icon-diamond  
+ </li>
+ <li>
+ <i class="icon icon-ship"></i>icon-ship   
+ </li>
+ <li>
+ <i class="icon icon-user-secret"></i>icon-user-secret   
+ </li>
+ <li>
+ <i class="icon icon-motorcycle"></i>icon-motorcycle   
+ </li>
+ <li>
+ <i class="icon icon-street-view"></i>icon-street-view  
+ </li>
+ <li>
+ <i class="icon icon-heartbeat"></i>icon-heartbeat   
+ </li>
+ <li>
+ <i class="icon icon-venus"></i>icon-venus   
+ </li>
+ <li>
+ <i class="icon icon-mars"></i>icon-mars   
+ </li>
+ <li>
+ <i class="icon icon-mercury"></i>icon-mercury  
+ </li>
+ <li>
+ <i class="icon icon-transgender"></i>icon-transgender   
+ </li>
+ <li>
+ <i class="icon icon-transgender-alt"></i>icon-transgender-alt   
+ </li>
+ <li>
+ <i class="icon icon-venus-double"></i>icon-venus-double   
+ </li>
+ <li>
+ <i class="icon icon-mars-double"></i>icon-mars-double  
+ </li>
+ <li>
+ <i class="icon icon-venus-mars"></i>icon-venus-mars   
+ </li>
+ <li>
+ <i class="icon icon-mars-stroke"></i>icon-mars-stroke   
+ </li>
+ <li>
+ <i class="icon icon-mars-stroke-v"></i>icon-mars-stroke-v   
+ </li>
+ <li>
+ <i class="icon icon-mars-stroke-h"></i>icon-mars-stroke-h  
+ </li>
+ <li>
+ <i class="icon icon-neuter"></i>icon-neuter   
+ </li>
+ <li>
+ <i class="icon icon-facebook-official"></i>icon-facebook-official   
+ </li>
+ <li>
+ <i class="icon icon-pinterest-p"></i>icon-pinterest-p   
+ </li>
+ <li>
+ <i class="icon icon-whatsapp"></i>icon-whatsapp  
+ </li>
+ <li>
+ <i class="icon icon-server"></i>icon-server   
+ </li>
+ <li>
+ <i class="icon icon-bed"></i>icon-bed   
+ </li>
+ <li>
+ <i class="icon icon-hotel"></i>icon-hotel   
+ </li>
+ <li>
+ <i class="icon icon-viacoin"></i>icon-viacoin  
+ </li>
+ <li>
+ <i class="icon icon-train"></i>icon-train   
+ </li>
+ <li>
+ <i class="icon icon-subway"></i>icon-subway   
+ </li>
+ <li>
+ <i class="icon icon-medium"></i>icon-medium
+  </li>
+</ul>
+
+<h2>Address</h2>
+
+<div class="moses-group">
+  <address>
+      <strong>Twitter, Inc.</strong><br>
+      795 Folsom Ave, Suite 600<br>
+      San Francisco, CA 94107<br>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <address>
+      <strong>Full Name</strong><br>
+      <a href="mailto:#">first.last@example.com</a>
+  </address>
+</div>
+
+<h2>Alerts</h2>
+<div class="moses-group">
+  <div class="alert alert-warning">
+      <strong>Warning Message!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>
+  <div class="alert alert-danger">
+      <strong>Error Message!</strong> Numquam quos fuga quam suscipit sapiente perferendis magnam.
+  </div>
+  <div class="alert alert-success">
+      <strong>Success Message!</strong> Totam officiis dolorum voluptatibus maxime molestiae iste.
+  </div>
+  <div class="alert alert-info">
+      <strong>Info Message!</strong> Consequatur facere deleniti cumque ducimus maiores nemo.
+  </div>
+</div>
+
+<h2>Badges</h2>
+
+<div class="moses-group">
+  <ul class="nav nav-pills">
+      <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Messages <span class="badge">3</span></a></li>
+  </ul>
+  <br>
+  <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+      <li class="active">
+          <a href="#">
+              <span class="badge pull-right">42</span>
+              Home
+          </a>
+      </li>
+      <li><a href="#">Profile</a></li>
+      <li>
+          <a href="#">
+              <span class="badge pull-right">3</span>
+              Messages
+          </a>
+      </li>
+  </ul>
+  <br>
+  <button class="btn btn-primary" type="button">
+      Messages <span class="badge">4</span>
+  </button>
+</div>
+
+<h2>Buttons</h2>
+
+<h3 class="moses-subheader">Basic</h3>
+
+<div class="moses-group">
+  <p>
+      <button type="button" class="btn btn-default">Default</button>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-link">Link</button>
+  </p>
+  <p>
+      <button type="button" class="btn btn-default disabled">Default</button>
+      <button type="button" class="btn btn-primary disabled">Primary</button>
+      <button type="button" class="btn btn-success disabled">Success</button>
+      <button type="button" class="btn btn-info disabled">Info</button>
+      <button type="button" class="btn btn-warning disabled">Warning</button>
+      <button type="button" class="btn btn-danger disabled">Danger</button>
+      <button type="button" class="btn btn-link disabled">Link</button>
+  </p>
+  <p>
+      <button type="button" class="btn btn-primary btn-lg">Large</button>
+      <button type="button" class="btn btn-primary disabled">Disabled</button>
+      <button type="button" class="btn btn-primary">Default</button>
+      <button type="button" class="btn btn-primary btn-sm">Small</button>
+      <button type="button" class="btn btn-primary btn-xs">Extra Small</button>
+  </p>
+</div>
+
+<h3 class="moses-subheader">Button Groups</h3>
+
+<div class="moses-group">
+  <div class="btn-toolbar" role="toolbar">
+      <div class="btn-group btn-group-lg">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group">
+                  <button type="button" class="btn btn-default">Left</button>
+                  <button type="button" class="btn btn-default">Middle</button>
+                  <button type="button" class="btn btn-default">Right</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-default">Left</button>
+                  <button type="button" class="btn btn-default">Middle</button>
+                  <button type="button" class="btn btn-default">Right</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group btn-group-xs">
+                  <button type="button" class="btn btn-default">Left</button>
+                  <button type="button" class="btn btn-default">Middle</button>
+                  <button type="button" class="btn btn-default">Right</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<h3 class="moses-subheader">Justified</h3>
+
+<div class="moses-group">
+  <div class="btn-group btn-group-justified">
+      <div class="btn-group">
+          <button type="button" class="btn btn-default">Left</button>
+      </div>
+      <div class="btn-group">
+          <button type="button" class="btn btn-default">Middle</button>
+      </div>
+      <div class="btn-group">
+          <button type="button" class="btn btn-default">Right</button>
+      </div>
+  </div>
+</div>
+
+<h3 class="moses-subheader">Vertical</h3>
+
+<div class="moses-group">
+  <div class="btn-group-vertical">
+      <button type="button" class="btn btn-default">Button</button>
+      <button type="button" class="btn btn-default">Button</button>
+      <div class="btn-group">
+          <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown">Dropdown
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+              <li><a href="#">Dropdown link</a></li>
+              <li><a href="#">Dropdown link</a></li>
+          </ul>
+      </div>
+      <button type="button" class="btn btn-default">Button</button>
+  </div>
+</div>
+
+<h3 class="moses-subheader">Dropdown</h3>
+
+<div class="moses-group">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="btn-group">
+              <button type="button" class="btn btn-default">1</button>
+              <button type="button" class="btn btn-default">2</button>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Dropdown link</a></li>
+                      <li><a href="#">Dropdown link</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12">
+          <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default</button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary</button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success</button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info</button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning</button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger</button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+      </div>
+      <div class="col-md-12">
+          <!--split-->
+          <div class="btn-group">
+              <button type="button" class="btn btn-default">Default</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="sr-only">Toggle Dropdown</span><span
+                      class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span
+                      class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span
+                      class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span
+                      class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+          <div class="btn-group">
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span
+                      class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <!-- /btn-group -->
+      </div>
+      <div class="col-md-12">
+          <!-- Large button group -->
+          <div class="btn-group">
+              <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Large button
+              </button>
+              <div style="margin-left: 2em" class="dropdown-menu">
+                  ...
+              </div>
+          </div>
+          <!-- Small button group -->
+          <div class="btn-group">
+              <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Small button
+              </button>
+              <div style="margin-left: 2em" class="dropdown-menu">
+                  ...
+              </div>
+          </div>
+          <!-- Extra small button group -->
+          <div class="btn-group">
+              <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Extra small
+                  button
+              </button>
+              <div style="margin-left: 2em" class="dropdown-menu">
+                  ...
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<h2>Definition Lists</h2>
+
+<h3 class="moses-subheader">Vertical</h3>
+
+<div class="moses-group">
+  <dl>
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+  </dl>
+</div>
+
+<h3 class="moses-subheader">Horizontal</h3>
+
+<div class="moses-group">
+  <dl class="dl-horizontal">
+      <dt>Description lists</dt>
+      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Euismod</dt>
+      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Malesuada porta</dt>
+      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+      <dt>Felis euismod semper eget lacinia</dt>
+      <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+          risus.
+      </dd>
+  </dl>
+</div>
+
+<h2>Dropdowns</h2>
+<div class="moses-group">
+  <div class="dropdown">
+    <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        Dropdown
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+        <li role="presentation" class="dropdown-header">Dropdown header</li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+        <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled action</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">Dropdown header</li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+      <!-- Link or button to toggle dropdown -->
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;">
+          <li class="dropdown-header">Dropdown header</li>
+          <li class="disabled">
+              <a tabindex="-1" href="#">Action</a>
+          </li>
+          <li>
+              <a tabindex="-1" href="#">Another action</a>
+          </li>
+          <li>
+              <a tabindex="-1" href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+              <a tabindex="-1" href="#">Separated link</a>
+          </li>
+      </ul>
+  </div>
+</div>
+
+<h2>Flags</h2>
+
+<h3 class="moses-subheader">Inline with Text</h3>
+
+<div class="moses-group">
+  <h1><i class="flag-icon flag-icon-gr"></i> H1 header</h1>
+  <h2><i class="flag-icon flag-icon-de"></i> H2 header</h1>
+  <h3><i class="flag-icon flag-icon-nl"></i> H3 header</h1>
+  <p>Paragraph <i class="flag-icon flag-icon-gb"></i> text</p>
+</div>
+
+<h3 class="moses-subheader">Any Element</h3>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="flag-wrapper">
+            <div class="img-thumbnail flag flag-icon-background flag-icon-ca"></div>
+        </div>
+    </div>
+</div>
+
+<h2>Images</h2>
+
+<div class="moses-group">
+  <p>
+      <img src="http://placehold.it/120x120" class="img-rounded">
+      <img src="http://placehold.it/120x120" class="img-circle">
+      <img src="http://placehold.it/120x120" class="img-thumbnail">
+  </p>
+  <img src="http://placehold.it/1200x300" class="img-responsive"/>
+</div>
+
+<h2>Labels</h2>
+
+<div class="moses-group">
+  <h1>Example heading <span class="label label-default">New</span></h1>
+  <h2>Example heading <span class="label label-default">New</span></h2>
+  <h3>Example heading <span class="label label-default">New</span></h3>
+  <h4>Example heading <span class="label label-default">New</span></h4>
+  <h5>Example heading <span class="label label-default">New</span></h5>
+  <h6>Example heading <span class="label label-default">New</span></h6>
+  <span class="label label-default">Default</span>
+  <span class="label label-primary">Primary</span>
+  <span class="label label-success">Success</span>
+  <span class="label label-info">Info</span>
+  <span class="label label-warning">Warning</span>
+  <span class="label label-danger">Danger</span>
+</div>
+
+<h2>Tables</h2>
+
+<h3 class="moses-subheader">Normal Usage</h3>
+
+<div class="moses-group">
+  <table class="table table-hover">
+      <thead>
+      <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Tables</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>1</td>
+          <td>Michael</td>
+          <td>Are formatted like this</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Lucille</td>
+          <td>Do you like them?</td>
+      </tr>
+      <tr class="success">
+          <td>3</td>
+          <td>Success</td>
+          <td></td>
+      </tr>
+      <tr class="danger">
+          <td>4</td>
+          <td>Danger</td>
+          <td></td>
+      </tr>
+      <tr class="warning">
+          <td>5</td>
+          <td>Warning</td>
+          <td></td>
+      </tr>
+      <tr class="active">
+          <td>6</td>
+          <td>Active</td>
+          <td></td>
+      </tr>
+      </tbody>
+  </table>
+
+  <h3 class="moses-subheader">Striped &amp; condensed table with alternating backgrounds</h3>
+
+  <table class="table table-striped table-bordered table-condensed">
+      <thead>
+      <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Tables</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>1</td>
+          <td>Michael</td>
+          <td>This one is bordered and condensed</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Lucille</td>
+          <td>Do you still like it?</td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+
+<h2>Truncate</h2>
+
+<h3 class="moses-subheader">Truncate without options</h3>
+
+<div class="moses-group">
+  <p eo-truncate style="max-height: 40px;">
+      Barcass ridetis, tanquam ferox cedrium. Nobilis animalis aegre vitares mortem est. Competition de ferox tata,
+      carpseris navis! Quadras peregrinatione! Credere nunquam ducunt ad flavum cotta. Luna secundus messor est. Alter,
+      clemens xiphiass semper pugna de barbatus, talis fluctus. Est gratis mons, cesaris. Hercle, usus domesticus!,
+      germanus abactor!Aonidess sunt lactas de festus hydra.
+      <a class="readmore">Read More</a>
+  </p>
+</div>
+
+<h3 class="moses-subheader">with options:</h3>
+
+<div class="moses-group">
+  <p eo-truncate eo-truncate-options="{after: 'a.readmore'}" style="max-height: 40px;">
+      Barcass ridetis, tanquam ferox cedrium. Nobilis animalis aegre vitares mortem est. Competition de ferox tata,
+      carpseris navis! Quadras peregrinatione! Credere nunquam ducunt ad flavum cotta. Luna secundus messor est. Alter,
+      clemens xiphiass semper pugna de barbatus, talis fluctus. Est gratis mons, cesaris. Hercle, usus domesticus!,
+      germanus abactor!Aonidess sunt lactas de festus hydra.
+      <a class="readmore">Read More</a>
+  </p>
+</div>
+
+<h3 class="moses-subheader">Truncate without starting as collapsed:</h3>
+
+<div class="moses-group">
+  <p eo-truncate eo-truncate-options="{collapsed: false, after: 'a.readmore'}" style="max-height: 40px;">
+    Barcass ridetis, tanquam ferox cedrium. Nobilis animalis aegre vitares mortem est. Competition de ferox tata,
+    carpseris navis! Quadras peregrinatione! Credere nunquam ducunt ad flavum cotta. Luna secundus messor est. Alter,
+    clemens xiphiass semper pugna de barbatus, talis fluctus. Est gratis mons, cesaris. Hercle, usus domesticus!,
+    germanus abactor!Aonidess sunt lactas de festus hydra.
+    <a class="readmore">Read More</a>
+  </p>
+</div>
+
+<h3 class="moses-subheader">Truncate without collapsibility:</h3>
+
+<div class="moses-group">
+  <p eo-truncate eo-truncate-options="{collapsible: false, after: 'a.readmore'}" style="max-height: 40px;">
+    Barcass ridetis, tanquam ferox cedrium. Nobilis animalis aegre vitares mortem est. Competition de ferox tata,
+    carpseris navis! Quadras peregrinatione! Credere nunquam ducunt ad flavum cotta. Luna secundus messor est. Alter,
+    clemens xiphiass semper pugna de barbatus, talis fluctus. Est gratis mons, cesaris. Hercle, usus domesticus!,
+    germanus abactor!Aonidess sunt lactas de festus hydra.
+    <a class="readmore">Read More</a>
+  </p>
+</div>
+
+<h3 class="moses-subheader">Full documentation:</h3>
+<p>All the options from <a href="http://dotdotdot.frebsite.nl">http://dotdotdot.frebsite.nl/</a> can be passed in.</p>
+
+<h2>Typography</h2>
+
+<h3 class="moses-subheader">Blockquote</h3>
+
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+<h3 class="moses-subheader">Blockquote Reverse:</h3>
+
+<blockquote class="blockquote-reverse">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+<h3 class="moses-subheader">Emphasis</h3>
+
+<div class="moses-group">
+  <strong>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</strong>
+
+  <em>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</em>
+
+  <small>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</small>
+</div>
+
+<h3 class="moses-subheader">Lists</h3>
+
+<ul class="list-inline">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+  <li>List Item 4</li>
+</ul>
+
+<ol>
+  <li>List Item 1
+    <li>List Item 2</li>
+    <li>List Item 3
+      <ul>
+        <li>List Item 3.1</li>
+        <li>List Item 3.2</li>
+        <li>List Item 3.3</li>
+        <li>List Item 3.4</li>
+      </ul>
+    </li>
+    <li>List Item 4</li>
+  </li>
+</ol>
+
+<ul>
+  <li>List Item 1
+    <li>List Item 2</li>
+    <li>List Item 3
+      <ul>
+        <li>List Item 3.1</li>
+        <li>List Item 3.2</li>
+        <li>List Item 3.3</li>
+        <li>List Item 3.4</li>
+      </ul>
+    </li>
+    <li>List Item 4</li>
+  </li>
+</ul>
+
+<ul class="list-unstyled">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+  <li>List Item 4</li>
+</ul>
+
+<h3 class="moses-subheader">Body Copy</h3>
+
+<div class="moses-group">
+  <p class="lead">Lead paragraph: vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
+    non commodo luctus.</p>
+  <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis
+      parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+  <p>
+      <small>This line of text is meant to be treated as fine print.</small>
+  </p>
+  <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+  <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+  <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+</div>
+
+<h3 class="moses-subheader">Headings</h3>
+
+<div class="moses-group">
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+</div>
+
+<h3 class="moses-subheader">Text Alignment</h3>
+
+<div class="moses-group">
+  <p class="text-left">Left Alignment</p>
+  <p class="text-center">Center Alignment</p>
+  <p class="text-right">Right Alignment</p>
+  <p class="text-justify">Justified Text</p>
+</div>
+
+<h2>Wells</h2>
+
+<div class="moses-group">
+  <div class="well">
+      Look, I'm in a well!
+  </div>
+  <div class="well well-sm">
+      Small Well
+  </div>
+  <div class="well well-lg">
+      Large Padding Well
+  </div>
+  <div class="well well-primary">
+      primary well
+  </div>
+  <div class="well well-warning">
+      warning well
+  </div>
+  <div class="well well-danger">
+      danger well
+  </div>
+  <div class="well well-success">
+      success well
+  </div>
+  <div class="well well-info">
+      info well
+  </div>
+  <div class="well bg-primary">
+      Well with bg helper class bg-primary
+  </div>
+  <div class="well bg-waring">
+      Well with bg helper class bg-warning
+  </div>
+  <div class="well bg-danger">
+      Well with bg helper class bg-danger
+  </div>
+  <div class="well bg-success">
+      Well with bg helper class bg-success
+  </div>
+  <div class="well bg-info">
+      Well with bg helper class bg-info
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script src="../../../src/moses.js"></script>
+</body>
