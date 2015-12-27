@@ -20,7 +20,6 @@ fileref.setAttribute("type", "text/css");
 fileref.setAttribute("href", 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 document.getElementsByTagName("head")[0].appendChild(fileref);
 
-
 //actual code:
 $(document).ready(function() {
   // var rootStyleGuidePath = '/examples/custom'; //FIX THIS WITH REAL LOGIC
@@ -46,8 +45,6 @@ $(document).ready(function() {
 
     path = parseDirectoryURL(path);
 
-    console.log('path is ' + path);
-
     possibleTargets.forEach( function (e, i) {
       if (path.indexOf(e.toLowerCase()) > -1)  {
         targetPage = e;
@@ -62,7 +59,6 @@ $(document).ready(function() {
     }
 
     path = parseDirectoryURL(path); //we call this twice on purpose!!
-    console.log('path is ' + path);
 
     rootStyleGuidePath = path;
   }
@@ -84,12 +80,7 @@ $(document).ready(function() {
     return path;
   }
 
-
-
   assignNavigationTarget();
-
-  console.log(targetPage);
-  console.log($("#moses-" + targetPage));
 
 
 
@@ -99,8 +90,6 @@ $(document).ready(function() {
       class: "brush: xml"
     });
   }
-
-  //do the subheader logic, FIX header link bug
 
   //navigation html:
   $("#styleguide").parent().append("<moses-navigation>
@@ -137,7 +126,6 @@ $(document).ready(function() {
 
   //Listen 'ESC' key to untoggle left navigation:
   $(document).keyup(function(e){
-    console.log("called");
     if(e.which == 27){
       $("moses-top-fixed-navigation").find(".fa").toggleClass("fa-bars").toggleClass("fa-times");
       $("moses-left-navigation").toggle();
@@ -171,18 +159,85 @@ $(document).ready(function() {
         $(e).addClass('moses-title')
       });
 
-      $.each(ref_subheader_array, function(i, e) {
-        subheaderArray = $.merge(subheaderArray, ref_subheader_array);
-      });
-
       headersArray = $.merge(headersArray, ref_array);
+      subheaderArray = $.merge(subheaderArray, ref_subheader_array);
     }(i)
 
     if (callback) { callback(); }
   }
   
+  //subheader assignment logic: THERE IS A STRANGE BUG HERE
+
+  function findSubheadersHeader (element, promise) {
+    var prevElement = $(element).prev();
+
+    // console.log("break point");
+    // console.log(element);
+
+    if (!prevElement.hasClass('moses-subheader')) {
+      switch (prevElement.prop("tagName")) {
+        case "H1":
+        case "H2":
+        case "H3":
+        case "H4":
+          return promise.resolve(prevElement);
+          break;
+      }
+    }
+
+    findSubheadersHeader(prevElement, promise);
+  }
+
+
+
+  function assignSubheader (element, index) {
+    var promise = jQuery.Deferred();
+
+    findSubheadersHeader(element, promise);
+    
+    promise.done(function (header) {
+      if (!header.next().hasClass("moses-subheader-display")) {
+        header.after("<div class='moses-subheader-display'></div>");
+      }
+
+      header.next().append("<a href='#" + $(element).attr('id') + "'>" + $(element).text() + "</a>");
+    });
+
+    // console.log('header found for element: ');
+    // console.log(header);
+  
+    //first find the category
+  }
+
+
+
   findHeaders(function () {
+    $.each(headersArray, function(i, e) { 
+      $("#moses-" + targetPage).append("<li><a href='#" + $(e).attr('id') + "'>" + $(e).text() + "</a></li>"); 
+    });
+
     console.log(subheaderArray);
+
+    $.each(subheaderArray, function(i, e) {
+      $(e).attr('id', 'sub-moses' + i);
+      $(e).addClass('moses-title');
+
+      assignSubheader(e, i);
+      // console.log(e);
+      //subheaderAssignmentLogicHere
+    });
+
+
+
+    // //subheader assignment logic:
+    // $.each(subheaderArray, function(i, e) { 
+    //   //assign the array to the right area
+
+
+    //   $(e).attr('class');
+    // });
+    // console.log(subheaderArray);
+
 
     //ITERATE OVER SUBHEADER ARRAY AND ASSIGN THEM TO THE SUBHEADER DISPLAYS
 
@@ -209,10 +264,6 @@ $(document).ready(function() {
     //   goToNextElement(element);
     // });
   });
-
-
-
-  console.log(headersArray);
 
   $.each(headersArray, function(i, e) { 
     $("#moses-" + targetPage).append("<li><a href='#" + $(e).attr('id') + "'>" + $(e).text() + "</a></li>"); 
@@ -243,7 +294,7 @@ $(document).ready(function() {
     }
 
     $element = $element.wrap("<div class='target'></div>");
-    console.log($element);
+    // console.log($element);
     return createScriptTag().html("<![CDATA[ " + html_beautify($element.parent().html(), { indent_size: 4 }) + " ]]>");
 
   }
@@ -263,7 +314,7 @@ $(document).ready(function() {
   });
 
   $(".moses-palette").find("p").each(function(i, e) {
-    $(e).wrap("<div class='moses-grid'></div>");
+    $(e).wrap("<div class='moses-palette-grid'></div>");
     var $grid = $(e).parent(),
         nextColor = $grid.next(".moses-color");
     if (nextColor) {

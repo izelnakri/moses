@@ -72,10 +72,10 @@ TODO:
 - maybe use http://prismjs.com/ (todo - low priority)
 - add ESC keylistener to untoggle navigation (done)
 - implement the rootStyleguidePath correctly in RegEX (probably done)
-- implement subheaderLists 
+- implement subheaderLists (done)
 - add Logic to implement extra Styleguide Categories (variable<Array> moses.js will check on runtime and merge it with possibleTargets<Array>)
-- .moses-grid clashes on color palette and grid display
-
+- click on the colors to copy color hex code
+- loading progress bar caveat
 
 special classes:
 

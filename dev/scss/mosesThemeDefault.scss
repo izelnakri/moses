@@ -130,14 +130,14 @@ h4:before, h5:before, h6:before {
 }
 
 //title styling:
-.moses-title, .moses-subheader {
+.moses-title {
   padding-bottom: 12px;
   border-bottom: 1px solid lightgrey;
 }
 
 //moses-palette styling: 
 .moses-palette {
-  .moses-grid { //redundandy naming
+  .moses-palette-grid { //redundandy naming
     text-align: center;
     width: 16%;
     font-size: 16px;
@@ -180,6 +180,19 @@ h4:before, h5:before, h6:before {
     text-align: left;
     padding-left: 15px;
     margin-bottom: 5px;
+  }
+}
+
+.moses-subheader-display {
+  margin: 0px 25px 20px 25px;
+  a {
+    color: #8c8c8c !important;
+    text-decoration: none !important;
+    padding: 5px 0 !important;
+    display: block !important;
+    font-weight: 400 !important;
+    display: inline-block !important;
+    width: 33% !important;
   }
 }
 
